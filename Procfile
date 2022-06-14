@@ -1,1 +1,1 @@
-web: gunicorn ttbeutyportal.wsgi
+web: gunicorn ttbeuatyportal.wsgi.application
