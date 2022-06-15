@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -33,7 +34,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com', 'localhost']
-
 
 # Application definition
 
@@ -132,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_STORAGE ='cloudinary_storage.storage.StaticHashedClouadinaryStorage'
+STATICFILES_STORAGE ='cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
