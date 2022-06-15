@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'bookings',
     'accounts',
+    'portfolio',
 ]
 
 MIDDLEWARE = [
