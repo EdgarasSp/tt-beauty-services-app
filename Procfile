@@ -1,1 +1,1 @@
-web: gunicorn ttbeuatyportal.wsgi
+web: gunicorn ttbeautyportal.wsgi
