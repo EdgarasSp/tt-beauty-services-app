@@ -15,11 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+#from bookings.views import bookings_page  #added
+
 
 # import ttbeautyportal.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('', include('portfolio.urls'), name='portfolio-urls'),
+    path('templates/', include('about.urls'), name='about-urls'),
+    path('templates/', include('services.urls'), name='services-urls'),
+    path('templates/', include('bookings.urls'), name='bookings-urls'),
     path('summernote/', include('django_summernote.urls')),
 ]
