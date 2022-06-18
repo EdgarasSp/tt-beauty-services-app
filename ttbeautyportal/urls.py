@@ -22,10 +22,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
     path('', include('portfolio.urls'), name='portfolio-urls'),
     path('templates/', include('about.urls'), name='about-urls'),
     path('templates/', include('services.urls'), name='services-urls'),
     path('templates/', include('bookings.urls'), name='bookings-urls'),
     path('summernote/', include('django_summernote.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
