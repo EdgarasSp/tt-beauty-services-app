@@ -21,13 +21,11 @@
 
     
 </head>
-
 <body class="d-flex flex-column h-100 main-bg">
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top text-uppercase ">
-        <a class="d-block d-lg-none align-self-start" href="{% url 'home_page' %}">
-            <img src="https://i.imgur.com/3oqaca0.png" alt="tt beauty services logo" style="width:auto;max-height:80px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <a class="d-block d-lg-none align-self-start container-fluid text-center" href="{% url 'home_page' %}">
+            <img src="https://i.imgur.com/3oqaca0.png" alt="tt beauty services logo" class="sm-logo" >
           </a>
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -46,7 +44,7 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'services' %}">Services</a>
                     </li>
                     <a class="d-none d-lg-block" href="{% url 'home_page' %}">
-                        <img src="https://i.imgur.com/3oqaca0.png" alt="tt beauty services logo" style="width:auto;max-height:80px;">
+                        <img src="https://i.imgur.com/3oqaca0.png" alt="tt beauty services logo" class="lm-logo"style="width:auto;max-height:80px;">
                       </a>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'portfolio' %}">Portfolio</a>
@@ -77,15 +75,83 @@
         {% endblock content %}
     </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+    <footer class="text-center text-lg-start bg-light text-muted" id="footermain">
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Promotions</h6>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Popular Services</h6>
+                        <p>
+                            <a href="#!" class="text-reset">Color</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Blowdry</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Cut</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Facial</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-2">
+                        <h6 class="text-uppercase fw-bold mb-2">Site links
+                        </h6>
+                        <p>
+                            <a href="{% url 'home_page' %}" class="text-reset">Home</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'about' %}" class="text-reset">About</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'services' %}" class="text-reset">Services</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'portfolio' %}" class="text-reset">Portfolio</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'books' %}" class="text-reset">Book Online</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center p-3 border-bottom">
+            <div style="font-size: 20px;" >
+                <a href="" class="me-4 text-reset text-decoration-none">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset text-decoration-none">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset text-decoration-none">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset text-decoration-none">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset text-decoration-none">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset text-decoration-none">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+        <!-- Copyright -->
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+            ©  Copyright - Website by Edgaras Spiridonov for CI Project:
+            <a class="text-reset fw-bold" href="https://github.com/EdgarasSp/tt-beauty-services-app">Github Project Repository</a>
+        </div>
     </footer>
-    
+     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     
