@@ -1,6 +1,5 @@
 body {
     background-color: #F9FAFC;
-    color: #E84610;
 }
 
 main {
@@ -117,14 +116,15 @@ main {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: #fa89b4;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color: #fd458c;
+    /* border: #f871a5 1px solid; */
+    color: #fff;
 }
 
 .link {
