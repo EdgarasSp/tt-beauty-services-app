@@ -161,6 +161,39 @@ main {
     color: rgba(22, 19, 19, 0.719);
 }
 
+/* Alert message style */
+.alert-fixed {
+    position:fixed; 
+    top: 20px; 
+    left: 0px; 
+    width: 100%;
+    z-index:9999; 
+    border-radius:0px
+}
+
+.alert-custom{
+    background-color: #fd458c;
+    color: #fff;
+    border: none;
+    opacity: 98%;
+}
+
+.alert-btn-custom{
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.show {
+    -webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+}
+
+.fade {
+    -webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+}
+
 /* burger inline with logo */
 
 @media (max-width: 990px) {
