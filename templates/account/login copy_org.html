@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h3>{% trans "Sign In" %}</h3>
+      
+      <p>{% blocktrans %}Welcome back to TT Beauty Site. <br><br>To leave a comment or like a post, please log in. If you
+        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+        first.{% endblocktrans %}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <!--LOGIN SOCIAL-->
+      <!-- {% get_providers as socialaccount_providers %}
+
+      {% if socialaccount_providers %}
+      <p>{% blocktrans with site.name as site_name %}Please sign in with one
+      of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+      for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+      <div class="socialaccount_ballot">
+
+        <ul class="socialaccount_providers">
+          {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+        </ul>
+
+        <div class="login-or">{% trans 'or' %}</div>
+
+      </div>
+
+      {% include "socialaccount/snippets/login_extra.html" %}
+
+      {% else %} -->
+      <!--MOVED UP-->
+      <!-- <p>{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p> -->
+      <!-- {% endif %} -->
+
+      <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <!--FORGOT PASSWORD-->
+        <!-- <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> -->
+        <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="h-100 gradient-form" style="background-color: #fff;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+                <div class="text-center">
+                  <img src="https://i.imgur.com/3oqaca0.png"
+                    style="width: 185px;" alt="logo">
+                  <h3 class="mt-1 mb-5 pb-1">{% trans "Sign In" %}</h3>
+                  <p>{% blocktrans %}Welcome back to TT Beauty Site. <br><br>To leave a comment or like a post, please log in. If you
+                    have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+                    first.{% endblocktrans %}</p>
+                </div>
+                <form class="login form-outline mb-4" method="POST" action="{% url 'account_login' %}">
+                  {% csrf_token %}
+                  <div>{{ form.as_p }}</div>
+                  {% if redirect_field_value %}
+                  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                  {% endif %}
+                  <!--FORGOT PASSWORD-->
+                  <!-- <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a> -->
+                  <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">We are more than just a company</h4>
+                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

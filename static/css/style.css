@@ -1,14 +1,25 @@
-body {
-    background-color: #F9FAFC;
+body{
+    /* background-color: #F9FAFC; */
+    
 }
 
 main {
     padding-top: 100px;
+    margin-bottom: 50px;
   }
-  @media (max-width: 980px) {
+  @media (max-width: 990px) {
     body {
-      padding-top: 50px;
+      padding-top: 10px;
     }
+    main {
+        margin-bottom: 50px;
+      }
+  }
+
+  @media (max-width: 760px) {
+    main {
+        margin-bottom: 50px;
+      }
   }
 
 .brand {
@@ -35,7 +46,7 @@ main {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    /* background-color: #F9FAFC; */
 }
 
 .card {
@@ -128,13 +139,14 @@ main {
 }
 
 .link {
-    color: #23BBBB;
+    color: #fd458c;
+    font-weight: bold;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #fd458c;
     text-decoration: underline;
 }
 
@@ -222,7 +234,20 @@ main {
         
     }
  }
- 
+
+/* login page */
+
+.account-image{
+    width: 50vh !important;
+}
+
+.account-image {
+    border-radius: 0% 30% 0% 30%;
+}
+
+
+ /* footer */
+
  #footermain {
     box-shadow: 0 -2px 8px rgba(0,0,0,0.5);
 }
