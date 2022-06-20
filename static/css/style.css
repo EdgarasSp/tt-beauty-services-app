@@ -30,7 +30,7 @@ main {
 }
 
 .red-o {
-    color: #E84610;
+    color: #fd458c;
 }
 
 .thin {
@@ -63,7 +63,7 @@ main {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: #fd458c;
 }
 
 .author {
@@ -113,7 +113,7 @@ main {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #fd458c;
 }
 
 .post-title {
@@ -245,7 +245,6 @@ main {
     border-radius: 0% 30% 0% 30%;
 }
 
-
  /* footer */
 
  #footermain {
@@ -258,4 +257,144 @@ main {
 
 footer p{
     margin-bottom: 0.1rem;
+}
+
+/* banner */
+
+.hero-banner h1 {
+    font-size: 48px;
+}
+.hero-banner .btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+.hero-banner .btn-primary {
+    color: #2f2f41;
+    background-color: rgba(1, 164, 121, 0.1);
+    border-color: #01a479;
+}
+.hero-banner .btn:before {
+    content: "";
+    background: #fd458c;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.hero-banner .btn:hover:before {
+    width: 100%;
+}
+
+/* Services */
+
+.rounded-corners{
+    border-radius: 25% 10% !important;
+}
+
+/* Services -  Rate Card*/
+
+.pricing-classic-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: left;
+	padding: 25px 20px 25px 0;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.pricing-classic-body h4 {
+	font-weight: 400;
+	font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.pricing-classic-body > * + * {
+	margin-top: 9px;
+}
+
+.price-value h4 {
+	font-weight: 400;
+}
+
+@media (min-width: 992px) {
+	.pricing-list-classic {
+		column-count: 2;
+		column-gap: 30px;
+	}
+	.pricing-list-classic .pricing-classic-item:nth-child(4n + 4) {
+		border-bottom: none;
+	}
+}
+
+.pricing-box-modern {
+	border: 3px solid #ffd8cb;
+}
+
+.pricing-box-modern .pricing-box-inner {
+	padding: 35px 15px;
+}
+
+.pricing-box-modern .pricing-box-inner .pricing-box-inner-list h4 {
+	font-family: "Montserrat", sans-serif;
+}
+
+.pricing-box-modern .pricing-box-inner .pricing-box-inner-list p {
+	font-size: 14px;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	font-weight: 500;
+	opacity: .6;
+}
+
+.pricing-box-modern .pricing-box-inner .pricing-box-inner-list h4 + p {
+	margin-top: 7px;
+}
+
+.pricing-box-modern .pricing-box-inner * + .pricing-box-inner-list {
+	margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+	.pricing-box-modern .pricing-box-inner {
+		padding: 40px 60px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.pricing-box-modern .pricing-box-inner.box-left {
+		padding-right: 75px;
+	}
+	.pricing-box-modern .pricing-box-inner.box-right {
+		padding-left: 120px;
+	}
+}
+
+.pricing-box-modern .img-wrap {
+	overflow: hidden;
+}
+
+.pricing-box-modern .img-wrap img {
+	position: absolute;
+	max-width: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+@media (min-width: 1200px) {
+	.pricing-box-modern .img-wrap {
+		overflow: visible;
+	}
+	.pricing-box-modern .img-wrap img {
+		box-shadow: 0 0 22px rgba(0, 0, 0, 0.1);
+	}
 }

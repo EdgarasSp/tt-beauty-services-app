@@ -10,7 +10,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
+                <div class="col-sm- 3 col-md-4 col-lg-3 col-xl-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -28,9 +28,11 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
+                            <div style="height: 100%">
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                            <p id="bottom" class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
