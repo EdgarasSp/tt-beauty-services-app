@@ -2,59 +2,73 @@
 
 {% block content %}
 
-<h1>This is About</h1>
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'portfolio_details' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
-            </div>
+<!-- Jumbotron -->
+<div class="container">
+    <div class="bg-image p-5 text-center shadow-1-strong mb-5 mt-5 row row align-items-center">
+        <br /><br />
+        <div class="col-lg-4">
+            <section>
+                <h6 class="">Salon Service</h6>
+                <h4 class="mb-3 h2 mt-3">London</h4>
+                <h5 class="pb-2">Cassandra Hair & Beauty</h5>
+            </section>
+            <section>
+                <div><strong class="hot-pink-text">Address: </strong>82 Mill Lane, London, NW6 1NL</div>
+                <div><a class="text-decoration-none text-reset" href="mailto:ttbeautyservices@gmail.com"><strong
+                            class="hot-pink-text">Email: </strong>ttbeautyservices@gmail.com</a></div>
+                <div><a class="text-decoration-none text-reset" href="tel:020 7431 5022"><strong
+                            class="hot-pink-text">Appointment: </strong> 020 7431 5022</a></div>
+            </section>
         </div>
+        <div class="col-lg-4">
+            <img src="https://i.imgur.com/rKRjU9F.jpg" class="img-fluid  circle" alt="Hairdressers-portrait">
+        </div>
+        <div class="col-lg-4">
+            <section>
+                <h6 class="">Mobile Service</h6>
+                <h4 class="mb-3 h2 mt-3">Chatham, Kent</h4>
+                <h5 class="pb-2">Home and Mobile Services</h5>
+            </section>
+            <section>
+                <div><strong class="hot-pink-text">Address: </strong>22 Shirley Ave, Chatham ME5 9UR</div>
+                <div><a class="text-decoration-none text-reset" href="mailto:ttbeautyservices@gmail.com"><strong
+                            class="hot-pink-text">Email: </strong>ttbeautyservices@gmail.com</a></div>
+                <div><a class="text-decoration-none text-reset" href="tel:020 7431 5022"><strong
+                            class="hot-pink-text">Appointment: </strong> 020 7431 5022</a></div>
+            </section>
+        </div>
+        <br /><br />
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
+<!-- Jumbotron -->
+
+<!--About Bio-->
+<div class="container-fluid">
+    <!-- Hero Banner Section -->
+    <section class="hero-banner col-12 bg-light py-5">
+        <div class="container">
+            <div class="row row align-items-center text-center">
+                <div class="col-lg-6 offset-lg-0 order-lg-1 ">
+                    <div style="width: 100%"><iframe width="100%" height="400" frameborder="0" scrolling="no"
+                            marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=82%20Mill%20Lane,%20London,%20NW6%201NL+(Cassandra%20Hair%20&amp;%20Beauty)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.gps.ie/wearable-gps/"></a></iframe></div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mt-3 text-center">Salon Service</h2>
+                    <h6 class="mt-3 text-center"> - London - </h6>
+                    <p class="lead text-secondary my-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Repellendus praesentium
+                        labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+                        neque maiores dolorem unde? Aut dolorum quod excepturi fugit.</p>
+                    <a href="{% url 'books' %}" class="btn btn-signup">Book Now</a>
+                </div>
+            </div>
+            <br />
+        </div>
+    </section>
+</div>
+<!--About Bio-->
+
+
 {%endblock%}

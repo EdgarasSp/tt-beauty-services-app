@@ -402,7 +402,19 @@ footer p{
 	}
 }
 
+
+/* Accordion */
 .hot-pink{
     background: #fd458c !important;
     color: #fff !important;
+}
+
+.hot-pink-text{
+    color: #fd458c !important;
+}
+
+.circle{
+    border-radius: 50%;
+    height:360px;
+    object-fit: cover;
 }
