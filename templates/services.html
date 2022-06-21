@@ -2,14 +2,14 @@
 
 {% block content %}
 
-
+<!-- Hero -->
 <div class="container-fluid">
   <!-- Hero Banner Section -->
   <section class="hero-banner col-12 bg-light py-5">
     <div class="container">
       <br /><br /><br /><br />
-      <div class="row row align-items-center">
-        <div class="col-lg-5 offset-lg-0 order-lg-1 ">
+      <div class="row row align-items-center text-center">
+        <div class="col-lg-6 offset-lg-0 order-lg-1 ">
           <img src="https://i.imgur.com/GVZTMJn.jpg" class="img-fluid  rounded-corners" alt="Hairdressers">
         </div>
         <div class="col-lg-6">
@@ -25,9 +25,9 @@
     </div>
   </section>
 </div>
+<!-- Hero -->
 
-
-
+<!-- Rate Card -->
 <div class="container pt-5 mt-5">
   <section class="section section-md bg-default text-center">
     <div class="container">
@@ -116,24 +116,34 @@
     </div>
   </section>
 </div>
+<!-- Rate Card -->
 
 <!-- Jumbotron -->
 <div class="container">
-  <div
-    class="bg-image p-4 text-center shadow-1-strong rounded-pill mb-5 mt-5"
-    style="background-image: url('https://i.imgur.com/IVwDSKl.jpg')">
-    <h1 class="mb-3 h2">Jumbotron</h1>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
-      labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
-      neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
-    </p>
-    <a href="{% url 'books' %}" class="btn btn-signup">Book Now</a>
+  <div class="bg-image p-5 text-center shadow-1-strong mb-5 mt-5 row row align-items-center">
+    <br /><br />
+    <div class="col-lg-4">
+      <img src="https://i.imgur.com/m0APuyc.jpg" class="img-fluid  rounded-corners-reverse" alt="Hairdressers">
+    </div>
+    <div class="col-lg-4">
+      <h1 class="mb-3 h2 mt-3">Jumbotron</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
+        labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+        neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
+      </p>
+      <a href="{% url 'books' %}" class="btn btn-signup mb-3">Book Now</a>
+    </div>
+    <div class="col-lg-4">
+      <img src="https://i.imgur.com/uL7ZYKV.jpg" class="img-fluid  rounded-corners" alt="Hairdressers">
+    </div>
+    <br /><br />
   </div>
 </div>
 <!-- Jumbotron -->
 
-<div class="container ">
+<!-- Accordion -->
+<div class="container">
   <div class="text-center mt-5">
     <h2>FAQ</h2>
     <div class="divider-lg"></div>
@@ -143,59 +153,63 @@
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-          aria-expanded="true" aria-controls="collapseOne">
-          Accordion Item #1
-        </button>
+        <button class="accordion-button text-reset hot-pink" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Q. Can I make an appointment for the same day service?</button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-          overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
+          <p>Yes you can, but we would recommend you to book for a day in advance so that we can make proper
+            arrangements for you.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-          aria-expanded="false" aria-controls="collapseTwo">
-          Accordion Item #2
-        </button>
+        <button class="accordion-button collapsed text-reset hot-pink" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Q. Can I cancel a scheduled appointment?</button>
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-          overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
+          <p>Absolutely, but we would recommend you to cancel for at least 4 hours before the appointment.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        <button class="accordion-button collapsed text-reset hot-pink" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
-        </button>
+          Q. My hair is very fine /limp/flat/thinning, can you help?</button>
       </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+      <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree"
         data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-          adds the appropriate classes that we use to style each element. These classes control the overall appearance,
-          as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-          overriding our default variables. It's also worth noting that just about any HTML can go within the
-          <code>.accordion-body</code>, though the transition does limit overflow.
+          <p>The cut and shape is going to be even more important if your hair falls into this category. Knowing how to
+            style your own hair, what products and tools to use and how to use them effectively is the way to achieve
+            that ?salon look? effortlessly. Let us show you how. Using hair care products will transform the look and
+            feel of your hair.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed text-reset hot-pink" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Q. Need help with my DIY project. I've put a colour on my hair and it's come out all wrong!!?</button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Call us and book for a FREE consultation, we are a experienced salon and it may be something quick, easy
+            and affordable that can be done to put it right..</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- Accordion -->
 
 {%endblock%}

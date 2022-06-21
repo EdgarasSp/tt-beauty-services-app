@@ -299,6 +299,9 @@ footer p{
     border-radius: 25% 10% !important;
 }
 
+.rounded-corners-reverse{
+    border-radius: 10% 25% !important;
+}
 /* Services -  Rate Card*/
 
 .pricing-classic-item {
@@ -397,4 +400,9 @@ footer p{
 	.pricing-box-modern .img-wrap img {
 		box-shadow: 0 0 22px rgba(0, 0, 0, 0.1);
 	}
+}
+
+.hot-pink{
+    background: #fd458c !important;
+    color: #fff !important;
 }
