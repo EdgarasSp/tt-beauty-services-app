@@ -2,10 +2,7 @@
 
 {% block content %}
 
-<h1>This is Portfolio</h1>
 <div class="container">
-
-
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
@@ -14,14 +11,14 @@
                 <div class="col-sm- 3 col-md-4 col-lg-3">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <div class="image-container">
+                            <div class="image-container ">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
+                                <img class="card-img-top "
                                     src="https://i.imgur.com/IVwDSKl.jpg">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top rounded-3 " src=" {{ post.featured_image.url }}">
                                 {% endif %}
-                                <div class="image-flash">
+                                <div class="image-flash rounded-3">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
