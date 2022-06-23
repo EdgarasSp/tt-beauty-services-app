@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<!-- Carousel-Start-->
 <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true"
@@ -12,7 +13,6 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://i.imgur.com/MDOwKv3.jpg" class="d-block w-100" alt="...">
-      <!-- <div class="carousel-caption d-none d-md-block position-absolute top-50  translate-d-flex justify-content-center"> -->
       <div
         class="carousel-caption d-none d-md-block position-absolute top-50 start-0 translate-middle align-items-center">
         <br><br><br>
@@ -57,5 +57,35 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<!-- Carousel-End-->
+
+<!-- why-us-section-start -->
+<div class="container col-12 py-5 mt-5 mb-5">
+  <div class="row row align-items-center text-center">
+    <section class="col-lg-6">
+      <h1 class="mt-3 text-center">Why Choose Us </h1>
+      <p class="lead text-secondary my-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
+        praesentium
+        labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
+        neque maiores dolorem unde? Aut dolorum quod excepturi fugit.</p>
+      <a href="{% url 'services' %}" class="btn btn-signup">Our Services</a>
+      <a href="{% url 'books' %}" class="btn btn-signup">Book Now</a>
+    </section>
+    <section class="col-lg-3">
+      <div class="">
+        <img src="https://i.imgur.com/cKDu9SW.jpg" class="img-fluid rounded-corners pt-5" alt="Hairdressers">
+      </div>
+    </section>
+    <section class="col-lg-3 d-none d-md-block">
+      <div class="">
+        <img src="https://i.imgur.com/ljGJSu0.jpg" class="img-fluid rounded-corners pt-5" alt="Hairdressers">
+      </div>
+    </section>
+  </div>
+</div>
+<!-- why-us-section-end -->
+
+
+
 
 {%endblock%}
