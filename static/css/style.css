@@ -280,7 +280,7 @@ footer p {
 }
 
 .hero-banner .btn:before {
-    content: "";
+    /* content: ""; */
     background: #fd458c;
     width: 4px;
     height: 100%;
@@ -443,8 +443,8 @@ footer p {
 
 .carousel-caption {
     margin-left: 50vh;
-    width: 350px;
-    height: 300px;
+    width: 400px;
+    height: 350px;
     background-color: rgba(250, 250, 250, 0.8);
     border-radius: 5% 30% 5% 30%;
     color: #4A4A4F;
@@ -465,6 +465,7 @@ footer p {
     background-position: center;
     background-size: cover;
     background-image: url("https://i.imgur.com/TSvWu0m.jpg");
+    border-radius: 10%;
 }
 
 .carousel-review {
@@ -490,7 +491,7 @@ footer p {
 .shape-inner {	
     height: calc(380px + 1vw);
     width: calc(380px + 1vw);
-    background-color: rgba(247, 247, 247, 0.7);
+    background-color: rgba(255, 255, 255, 0.6);
     margin: auto;
     border: #d4af78 2px solid;
 }
