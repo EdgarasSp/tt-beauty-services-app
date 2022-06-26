@@ -1,0 +1,108 @@
+{% block content %}
+
+<div class="contact-container">
+    <div class="contact-hero"></div>
+
+    <!-- CONTACT FORM -->
+
+    <div class="center-form">
+        <form name="contactingForm" class="contacting-form" method="POST" onsubmit="return validateForm()">
+            <h1 class="contact-title">Contact Us</h1>
+
+            {% if messages %}
+            <div class="card notification-card notification-invitation">
+                <div class="card-body">
+                    {% for message in messages %}
+                    <div class="card-title">{{message}}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% csrf_token %}
+
+            <!-- CONTACT SUBJECT -->
+            <label for="subject_type">Subject</label>
+            <div class="form-group">
+                <span class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please select most appropriate subject line, if none applicable please choose "Other".
+                    </span>
+                </span>
+                <select id="subject_type" name="subject_type" class="form-control contacting-form-input multiple"
+                    required>
+                    <option value="" label="Choose option"></option>
+                    <option value="Services">Services</option>
+                    <option value="Prices">Prices</option>
+                    <option value="Mobile Services">Mobile Services</option>
+                    <option value="Salon Services">Salon Services</option>
+                    <option value="Products">Products</option>
+                    <option value="Consultation">Consultation</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Complaints">Complaints</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- SERVICE LOCATION -->
+            <label for="service_location">Service Location</label>
+            <div class="form-group">
+                <span class="info-hover"><i class="fas fa-info-circle"></i>
+                    <span class="info-hover-text">Please choose the location if applicable.</span>
+                </span>
+                <select id="service_location" name="service_location"
+                    class="form-control contacting-form-input multiple" required>
+                    <option value="" label="Choose option"></option>
+                    <option value="London">London</option>
+                    <option value="Chatham, Kent">Chatham, Kent</option>
+                    <option value="Other">Mobile Service</option>
+                    <option value="Not Applicable">Not Applicable</option>
+                </select>
+            </div>
+
+            <!-- FIRST NAME -->
+            <label for="first_name">First Name</label>
+            <div class="form-group">
+                <input type="text" name="first_name" id="first_name" class="form-control contacting-form-input"
+                    placeholder="Joseph" required />
+            </div>
+
+            <!-- LAST NAME -->
+            <label for="last_name">Last Name</label>
+            <div class="form-group">
+                <input type="text" name="last_name" id="last_name" class="form-control contacting-form-input"
+                    placeholder="Bloggs" required />
+            </div>
+
+            <!-- CONTACT NUMBER -->
+            <label for="contact_number">Your contact number.</label>
+            <div class="form-group">
+                <input type="text" name="contact_number" id="contact_number" class="form-control contacting-form-input"
+                    placeholder="Contact Number" required />
+            </div>
+
+            <!-- EMAIL ADDRESS -->
+            <label for="email_address">Your contact email address.</label>
+            <div class="form-group">
+                <input type="email" name="email_address" id="email_address" class="form-control contacting-form-input"
+                    placeholder="Email Address" required />
+            </div>
+
+            <!-- MESSAGE -->
+            <label for="message_problems">Your message.</label>
+            <div class="form-group">
+                <textarea rows="5" name="message_problems" id="message_problems" class="form-control booking-form-input"
+                    placeholder="How can we help?"></textarea>
+            </div>
+
+            <!-- FORM SUBMIT BUTTON -->
+            <div class="form-row text-center">
+                <div class="col">
+                    <button type="submit" class="btn btn-secondary" id="contact-button">contact <i
+                            class="fas fa-calendar-alt"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- END OF CONTACT FORM -->
+
+</div>
