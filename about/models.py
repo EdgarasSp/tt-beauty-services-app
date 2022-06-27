@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+STATUS = ((0, "Pending"), (1, "Completed"))
 class ContactForm(models.Model):
     subject_type = models.CharField(max_length=100)
     service_location = models.CharField(max_length=100)
@@ -11,6 +12,7 @@ class ContactForm(models.Model):
     email_address = models.TextField(max_length=50)
     message_problems = models.TextField(max_length=1000)
     received_date = models.DateField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
         return self.email_address
