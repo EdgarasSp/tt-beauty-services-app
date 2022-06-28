@@ -58,7 +58,7 @@
 
 
 <!--why-us-section-->
-<div class="container col-12 py-5 mt-5 mb-5">
+<div class="container col-12 py-5  mb-5">
   <div class="row row align-items-center text-center" style="height: 70vh">
     <section class="col-lg-6">
       <h1 class="mt-3 text-center">Why Choose Us </h1>
@@ -126,7 +126,7 @@
 
 
 <!--carousel-review-->
-<div class="container">
+<div class="container-fluid">
   <div id="carouselCaptions" class="carousel slide my-5" data-bs-ride="carousel">
     <div class="carousel-inner carousel-inner-review service_review">
       <div class="carousel-item carousel-item-review active">
@@ -186,31 +186,10 @@
 <!--carousel-review-->
 
 <!--contact-us-section-->
+<div>
 {% include "contact/contact_form.html" %}
-
-<!-- <div class="container col-12 py-5 mt-5 mb-5" style="height: 70vh; border: #da9f9f solid 1px">
-  <div class="row row align-items-center text-center">
-    <section class="col-lg-12">
-      <h1 class="mt-3 text-center">Contact Us </h1>
-      <p class="lead text-secondary my-5">Placeholder</p>
-      <a href="{% url 'services' %}" class="btn btn-signup">Send Message</a>
-    </section>
-  </div>
-</div> -->
-<!--why-us-section-->
-
-
-<!--subscribe-section-->
-<div class="container col-12 py-5 mt-5" style="height: 30vh; border: #da9f9f solid 1px">
-  <div class="row row align-items-center text-center">
-    <section class="col-lg-12">
-      <h1 class="mt-3 text-center">Subscribe </h1>
-      <p class="lead text-secondary my-5">Placeholder</p>
-      <a href="{% url 'services' %}" class="btn btn-signup">Subscribe</a>
-    </section>
-  </div>
 </div>
-<!--subscribe-section-->
+<!--contact-us-section-->
 
 
 {%endblock%}
