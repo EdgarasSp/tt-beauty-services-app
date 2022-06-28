@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // contact form validation
 
 function validateForm() {
-    
     let formvalid = true;
 
     // FIRST NAME & LAST NAME
@@ -76,6 +75,8 @@ function validateForm() {
     if (!/^0[0-9]{1,20}$/.test(contnum)) {
         formvalid = false;
         alert("Please provide a valid phone number between 5 and 20 numbers long using characters 0-9 (Please do not put spaces in your contact number)."); 
+
     }
     return formvalid;
+    
   }

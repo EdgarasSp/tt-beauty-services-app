@@ -14,6 +14,7 @@ class ContactForm(models.Model):
     received_date = models.DateField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+
     def __str__(self):
         return self.email_address
 
