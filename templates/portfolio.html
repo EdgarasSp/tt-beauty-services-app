@@ -13,9 +13,9 @@
                         <div class="card-body">
                             <div class="image-container ">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top " src="https://i.imgur.com/IVwDSKl.jpg">
+                                <img class="card-img-top " src="https://i.imgur.com/IVwDSKl.jpg" alt="portfolio placeholder image">
                                 {% else %}
-                                <img class="card-img-top rounded-3 " src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top rounded-3 " src=" {{ post.featured_image.url }}" alt="portfolio image">
                                 {% endif %}
                                 <div class="image-flash rounded-3">
                                     <p class="author">Author: {{ post.author }}</p>
@@ -43,9 +43,6 @@
         </div>
         <!-- Blog Column End-->
     </div>
-
-
-
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">

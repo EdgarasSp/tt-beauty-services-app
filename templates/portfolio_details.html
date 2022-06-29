@@ -11,9 +11,11 @@
             </div>
             <div class="d-none d-md-block col-md-6 portfolio-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://i.imgur.com/XkAPsbJ.jpg" width="100%">
+                <img src="https://i.imgur.com/XkAPsbJ.jpg" alt="portfolio placeholder image">
+                <!--width="100%"-->
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img src=" {{ post.featured_image.url }}" alt="portfolio image">
+                <!--width="100%"-->
                 {% endif %}
             </div>
         </div>
@@ -29,22 +31,22 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-                    <div class="col-1">
-                        <strong>
-                                {% if user.is_authenticated %}
-                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                    {% csrf_token %}
-                                    {% if liked %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
-                                    {% else %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
-                                    {% endif %}
-                                </form>
-                                {% else %}
-                                <span class="text-secondary"><i class="far fa-heart"></i></span>
-                                {% endif %}
-                                <span class="text-secondary"> {{ post.number_of_likes }}</span>
-                        </strong>
+                    <div class="col-1 font-weight-bold">
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="fas fa-heart"></i></button>
+                            {% else %}
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="far fa-heart"></i></button>
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        {% endif %}
+                        <span class="text-secondary"> {{ post.number_of_likes }}</span>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
