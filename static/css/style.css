@@ -45,7 +45,7 @@ main {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #292929;
 }
 
 .main-bg {
@@ -75,7 +75,7 @@ main {
     text-transform: uppercase;
 }
 
-.masthead {
+.portfolio {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
@@ -84,25 +84,24 @@ main {
     width: 100%;
 }
 
-.masthead-text {
-    background-color: #445261;
+.portfolio-text {
+    background-color: #292929;
     color: white;
     position: relative;
 }
 
-.masthead-image {
+.portfolio-image {
     position: relative;
     overflow: hidden;
 }
 
-.masthead-image:after {
-    /* content: ""; */
+.portfolio-image:after {
     position: absolute;
     top: 0;
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #292929;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -111,7 +110,7 @@ main {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #292929;
 }
 
 .post-link:hover,
@@ -137,7 +136,6 @@ main {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fd458c;
-    /* border: #f871a5 1px solid; */
     color: #fff;
 }
 
@@ -280,7 +278,6 @@ footer p {
 }
 
 .hero-banner .btn:before {
-    /* content: ""; */
     background: #fd458c;
     width: 4px;
     height: 100%;
@@ -435,8 +432,6 @@ footer p {
 
 .carousel-inner .carousel-item {
     object-fit: cover;
-    /* width: 100%; */
-
     height: 88vh;
 
 }
@@ -465,7 +460,6 @@ footer p {
     background-position: center;
     background-size: cover;
     background-image: url("https://i.imgur.com/mM4I3SR.jpg");
-    /* border-radius: 10%; */
 }
 
 .carousel-review {
@@ -485,7 +479,6 @@ footer p {
     flex-shrink: 0;
     height: calc(350px + 1vw);
     width: calc(400px + 1vw);
-    /* border: #d4af78 2px solid; */
 }
 
 .shape-inner {	
@@ -561,19 +554,14 @@ footer p {
 /* forms */
 
 .bg-light-form {
-    /* background-color: #fae7ed5b !important; */
-    /* border:#fa89b4 1px solid; */
     min-height: 75vh;
 }
 
 .form-horizontal .header{
-    /* background: rgb(253, 253, 253); */
     padding: 30px 25px;
     font-size: 30px;
-    /* font-weight: bold; */
     color: #292929;
     text-align: center;
-    /* text-transform: uppercase; */
     border-radius: 3px 3px 0 0;
 }
 .form-horizontal .heading{
@@ -591,9 +579,6 @@ footer p {
     height: 50px;
     font-size: 14px;
     color: #2b2a2a;
-    /* border: rgba(247, 183, 183, 0.884) 1px solid; */
-    /* border-bottom: 2px solid #ccc; */
-     
     box-shadow: none;
     margin-bottom: 15px;
 }
@@ -613,27 +598,12 @@ footer p {
     resize: vertical;
     height: 130px;
 }
-/* .form-horizontal .btn{
-    font-size: 18px;
-    color: #4e4e4e;
-    float: right;
-    margin: 10px 0;
-    border: 2px solid #ccc;
-    border-radius: 0;
-    padding: 10px 25px;
-    transition: all 0.5s ease 0s;
-}
-.form-horizontal .btn:hover{
-    background: #fff;
-    border-color: #fd458c; 
-} */
 
 .cover-picture{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url("https://i.imgur.com/9c04hzb.jpg");
-    /* border-radius: 10%; */
 }
 
 

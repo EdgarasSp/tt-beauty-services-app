@@ -34,41 +34,41 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul
                     class="navbar-nav container-fluid justify-content-center p-0 me-auto mb-4 mb-lg-0 align-items-center">
-                    <li class="nav-item ">
-                        <a class="nav-link active link" aria-current="page" href="{% url 'home_page' %}">Home</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'home_page' %}active link{% endif %}">
+                        <a class="nav-link active " aria-current="page" href="{% url 'home_page' %}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'about' %}active link{% endif %}">
+                        <a class="nav-link active" aria-current="about" href="{% url 'about' %}">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'services' %}">Services</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'services' %}active link{% endif %}">
+                        <a class="nav-link active" aria-current="services" href="{% url 'services' %}">Services</a>
                     </li>
                     <a class="d-none d-lg-block" href="{% url 'home_page' %}">
                         <img src="https://i.imgur.com/3oqaca0.png" alt="tt beauty services logo" class="lm-logo"
                             style="width:auto;max-height:80px;">
                     </a>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'portfolio' %}">Portfolio</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'portfolio' %}active link{% endif %}">
+                        <a class="nav-link active" aria-current="portfolio" href="{% url 'portfolio' %}">Portfolio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'books' %}">Book Online</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'books' %}active link{% endif %}">
+                        <a class="nav-link active" aria-current="booking" href="{% url 'books' %}">Book Online</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'account_logout' %}active link{% endif %}">
+                        <a class="nav-link active" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'account_signup' %}active link{% endif %}">
+                        <a class="nav-link active" href="{% url 'account_signup' %}">Register</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    <li class="nav-item {% if request.resolver_match.view_name == 'account_login' %}active link{% endif %}">
+                        <a class="nav-link active" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>
             </div>
         </div>
-        <!-- load bar (test once Optimized)-->
+        <!-- load bar #(test once Optimized)-->
 
         <!-- <div class='progress' id="progress_div">
             <div class='bar' id='bar1'></div>
@@ -179,9 +179,5 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/static/js/script.js" type="text/javascript"></script>
-    <!-- <link rel="script" href="{% static 'js/script.js' %}"> -->
-
-
 </body>
-
 </html>

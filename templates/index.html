@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<!--hero-carousel-->
+<!--Hero Carousel Start-->
 <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true"
@@ -54,10 +54,8 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<!--hero-carousel-->
-
-
-<!--why-us-section-->
+<!--Hero Carousel End-->
+<!--Why Us Section Start-->
 <div class="container col-12 py-5  mb-5">
   <div class="row row align-items-center text-center" style="height: 70vh">
     <section class="col-lg-6">
@@ -81,21 +79,16 @@
     </section>
   </div>
 </div>
-<!--why-us-section-->
-
-
-<!--our-products-->
+<!--Why Us Section End-->
+<!--Our Products Start-->
 <div class="container col-12 py-5 my-5 pb-5">
   <div class="row row align-items-center text-center">
     <section class="col-lg-6">
       <div>
         <!-- <a href="https://imgur.com/kcwlOat"><img src="https://i.imgur.com/kcwlOatm.mp4" title="source: imgur.com" /></a> -->
- 
         <video href="media/hairdresser_ci_project_4.mp4" class="container" style="width: 330 ; height: 600px" autoplay
           muted loop controls></video>
-
         <!-- <iframe src="https://www.youtube.com/embed/riIpsjL87h0?autoplay=1&loop=1&modestbranding=1&rel=0&iv_load_policy=3&fs=0&color=white&disablekb=1&playlist=riIpsjL87h0" width="600" height="600" style="overflow: hidden" title="hairdresser ci project 4" frameborder="0"></iframe> -->
-
       </div>
     </section>
     <section class="col-lg-6 mt-5">
@@ -124,10 +117,8 @@
     </section>
   </div>
 </div>
-<!--our-products-->
-
-
-<!--carousel-review-->
+<!--Our Products End-->
+<!--Carousel Review Start-->
 <div class="container-fluid">
   <div id="carouselCaptions" class="carousel slide my-5" data-bs-ride="carousel">
     <div class="carousel-inner carousel-inner-review service_review">
@@ -185,13 +176,11 @@
     </div>
   </div>
 </div>
-<!--carousel-review-->
-
-<!--contact-us-section-->
+<!--Carousel Review End-->
+<!--Contact Us Include Form Start-->
 <div>
-{% include "contact/contact_form.html" %}
+  {% include "contact/contact_form.html" %}
 </div>
-<!--contact-us-section-->
-
+<!--Contact Us Include Form End-->
 
 {%endblock%}

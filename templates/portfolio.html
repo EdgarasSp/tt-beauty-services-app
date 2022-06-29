@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row">
-        <!-- Blog Entries Column -->
+        <!-- Blog Column Start-->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
@@ -13,8 +13,7 @@
                         <div class="card-body">
                             <div class="image-container ">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top "
-                                    src="https://i.imgur.com/IVwDSKl.jpg">
+                                <img class="card-img-top " src="https://i.imgur.com/IVwDSKl.jpg">
                                 {% else %}
                                 <img class="card-img-top rounded-3 " src=" {{ post.featured_image.url }}">
                                 {% endif %}
@@ -27,9 +26,10 @@
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                             <div style="height: 100%">
-                            <hr />
-                            <p id="bottom" class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
+                                <hr />
+                                <p id="bottom" class="card-text text-muted h6">{{ post.created_on}} <i
+                                        class="far fa-heart"></i>
+                                    {{ post.number_of_likes }}</p>
                             </div>
                         </div>
                     </div>
@@ -41,6 +41,7 @@
                 {% endfor %}
             </div>
         </div>
+        <!-- Blog Column End-->
     </div>
 
 

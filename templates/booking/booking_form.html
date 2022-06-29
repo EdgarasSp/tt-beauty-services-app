@@ -2,18 +2,10 @@
 
 
 <div class="container ">
-
-    
     <!-- BOOKING FORM -->
-
     <div class="col-12">
-        <!--center-form-->
         <div class="container">
             <form name="ContactForm" class="form-horizontal" method="post" onsubmit="return validateForm()">
-                <!--contacting-form -->
-                <!-- <div class="header"><h2>Contact Us</h2></div> -->
-                <!-- <h1 class="contact-title">Contact Us</h1> -->
-
                 {% if messages %}
                 <div class="card notification-card notification-invitation">
                     <div class="card-body">
@@ -25,13 +17,11 @@
                 {% endif %}
 
                 {% csrf_token %}
-
-                
                 <div class="form-content bg-light-form">
                     <div class="container-fluid">
                         <div class="hero-banner col-12  text-center shadow-1-strong">
                             <div class="col-lg-12 justify-content-center">
-                                <h2 >Make an Appointment</h2>
+                                <h2>Make an Appointment</h2>
                                 <p class="mb-5">
                                     The best way to enjoy a hair service is to book an appointment with us.<br>
                                     Fill in the form below and we will contact you to discuss your appointment.
@@ -42,17 +32,10 @@
                     <h4 class="heading text-uppercase">Service Details</h4>
                     <div class="form-group row row">
                         <div class="col-12 col-md-6">
-                            <!-- CONTACT SUBJECT -->
-                            <!-- <label for="subject_type">Subject</label> -->
+                            <!-- Booking Subject -->
                             <div class="form-group">
-                                <!-- <span class="info-hover"><i class="fas fa-info-circle"></i>
-                                    <span class="info-hover-text">Please select subject line, if none
-                                        applicable
-                                        please choose "Other".
-                                    </span>
-                                </span> -->
-                                <select id="service" name="service"
-                                    class="form-control contacting-form-input multiple " required>
+                                <select id="service" name="service" class="form-control contacting-form-input multiple "
+                                    required>
                                     <option value="" label="Choose Service"></option>
                                     <option value="cut-blowdry">Cut & Blowdry</option>
                                     <option value="restyle">Restyle</option>
@@ -60,19 +43,17 @@
                                     <option value="blowdry">Blowdry</option>
                                     <option value="full-head-highlights">Full head highlights</option>
                                     <option value="half-head-highlights">Half head highlights</option>
-                                    <option value="full-head-roots-permanent-colour">Full head/roots permanent Colour</option>
-                                    <option value="full-head-semi-permanent-colour">Full Head Semi Permanent Colour</option>
+                                    <option value="full-head-roots-permanent-colour">Full head/roots permanent Colour
+                                    </option>
+                                    <option value="full-head-semi-permanent-colour">Full Head Semi Permanent Colour
+                                    </option>
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <!-- SERVICE LOCATION -->
-                            <!-- <label for="service_location">Service Location</label> -->
                             <div class="form-group">
-                                <!-- <span class="info-hover"><i class="fas fa-info-circle"></i>
-                                    <span class="info-hover-text">Please choose the location if applicable.</span>
-                                </span> -->
                                 <select id="service_location" name="service_location"
                                     class="form-control contacting-form-input multiple" required>
                                     <option value="" label="Choose Service Location"></option>
@@ -88,19 +69,17 @@
                     <div class="form-group row row">
                         <div class="col-lg-6">
                             <!-- FIRST NAME -->
-                            <!-- <label for="first_name">First Name</label> -->
                             <div class="form-group">
                                 <input type="text" name="first_name" id="first_name"
-                                    class="form-control contacting-form-input" placeholder="Joseph" required />
+                                    class="form-control contacting-form-input" placeholder="First Name" required />
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <!-- LAST NAME -->
-                            <!-- <label for="last_name">Last Name</label> -->
                             <div class="form-group">
                                 <input type="text" name="last_name" id="last_name"
-                                    class="form-control contacting-form-input" placeholder="Bloggs" required />
+                                    class="form-control contacting-form-input" placeholder="Last Name" required />
                             </div>
                         </div>
                     </div>
@@ -108,7 +87,6 @@
                     <div class="form-group row row">
                         <div class="col-lg-6">
                             <!-- CONTACT NUMBER -->
-                            <!-- <label for="contact_number">Your contact number.</label> -->
                             <div class="form-group">
                                 <input type="text" name="contact_number" id="contact_number"
                                     class="form-control contacting-form-input" placeholder="Contact Number" required />
@@ -117,31 +95,28 @@
 
                         <div class="col-lg-6">
                             <!-- EMAIL ADDRESS -->
-                            <!-- <label for="email_address">Your contact email address.</label> -->
                             <div class="form-group">
                                 <input type="email" name="email_address" id="email_address"
                                     class="form-control contacting-form-input" placeholder="Email Address" required />
                             </div>
                         </div>
                     </div>
-                    
+
                     <h4 class="heading text-uppercase">Appointment Details</h4>
                     <div class="form-group row row">
                         <div class="col-lg-6">
-                            <!-- Date -->
-                            <!-- <label for="contact_number">Your contact number.</label> -->
+                            <!-- DATE -->
                             <div class="form-group">
-                                <input type="date" name="date" id="date"
-                                    class="form-control contacting-form-input" placeholder="Date" required />
+                                <input type="date" name="date" id="date" class="form-control contacting-form-input"
+                                    placeholder="Date" required />
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <!-- Time -->
-                            <!-- <label for="email_address">Your contact email address.</label> -->
+                            <!-- TIME -->
                             <div class="form-group">
-                                <input type="time" name="time" id="time"
-                                    class="form-control contacting-form-input" placeholder="Time" required />
+                                <input type="time" name="time" id="time" class="form-control contacting-form-input"
+                                    placeholder="Time" required />
                             </div>
                         </div>
                     </div>
@@ -149,36 +124,23 @@
 
                         <div class="col-lg-12">
                             <!-- MESSAGE -->
-                            <!-- <label for="message_problems">Your message.</label> -->
                             <div class="form-group">
                                 <textarea rows="5" name="message_problems" id="message_problems"
-                                    class="form-control booking-form-input" placeholder="Let us know of any specifics?"></textarea>
+                                    class="form-control booking-form-input"
+                                    placeholder="Let us know of any specifics?"></textarea>
                             </div>
                         </div>
-
-
                         <!-- FORM SUBMIT BUTTON -->
-
                         <div class="row row align-items-center text-center">
                             <div class="col-lg-12">
-                                <!-- <a href="{% url 'books' %}" class="btn btn-signup">Book Now</a> -->
                                 <button type="submit" class="btn btn-signup" id="contact-button">Make Booking</div>
-                            </div>
-                          </div>
-                        <!-- <div class="form-row text-center">
-                            <div class="col">
-                                <button type="submit" class="btn btn-signup" id="contact-button">contact</div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
-            </form>
         </div>
+        </form>
     </div>
-    <!-- END OF BOOKING FORM -->
-    <!--     
-    </div>
-</div> -->
+</div>
+<!-- END OF BOOKING FORM -->
 
-
-
-    {% endblock content %}
+{% endblock content %}
