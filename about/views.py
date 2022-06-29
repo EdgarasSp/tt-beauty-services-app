@@ -37,7 +37,7 @@ def about_page(request):  ## home
 
 
 class SendContactFormTemplateView(TemplateView):
-    template_name = 'contact/contact_form.html'
+    # template_name = 'contact/contact_form.html'
 
     def post(self, request):
         subject_type = request.POST.get('subject_type')
@@ -63,6 +63,5 @@ class SendContactFormTemplateView(TemplateView):
         contact_form.save()
 
         messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. For your message.")
-        console.log("bottom")
         return HttpResponseRedirect(request.path)
 

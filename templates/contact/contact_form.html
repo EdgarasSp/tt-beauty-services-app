@@ -10,7 +10,7 @@
     <div class="col-12">
         <!--center-form-->
         <div class="container">
-            <form name="ContactForm" class="form-horizontal" method="post" onsubmit="return validateForm()">
+            <form action="{% url 'contact_form'%}" name="ContactForm" class="form-horizontal" method="post" onsubmit="return validateForm()">
                 <!--contacting-form -->
                 <div class="header"><h2>Contact Us</h2></div>
                 <!-- <h1 class="contact-title">Contact Us</h1> -->
