@@ -100,6 +100,12 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup mt-2">Submit</button>
                 </form>
+                {% else %}
+                <h5 class="text-center">Please Login or Register below to leave a comment or a like.</h5>
+                <div class="text-center">
+                    <a href="{% url 'account_signup' %}" class="btn btn-signup my-3">Register</a>
+                    <a href="{% url 'account_login' %}" class="btn btn-signup my-3">Login</a>
+                  </div>
                 {% endif %}
                 {% endif %}
             </div>
