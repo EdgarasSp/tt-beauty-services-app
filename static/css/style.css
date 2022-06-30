@@ -368,12 +368,12 @@ footer p {
     display: flex;
     flex-shrink: 0;
     height: calc(350px + 1vw);
-    width: calc(400px + 1vw);
+    width: calc(390px + 1vw);
 }
 
 .shape-inner {	
     height: calc(330px + 1vw);
-    width: calc(390px + 1vw);
+    width: calc(380px + 1vw);
     background-color: #fff;
     margin: auto;
     border: #d4af78 3px solid;
