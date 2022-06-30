@@ -19,4 +19,3 @@ class Booking(models.Model):
 
     class Meta:
         ordering = ['-received_date']
-
