@@ -5,7 +5,7 @@
     <!-- BOOKING FORM -->
     <div class="col-12">
         <div class="container">
-            <form name="ContactForm" class="form-horizontal" method="post" onsubmit="return validateForm()">
+            <form name="ContactForm" action ="{% url 'book_form'%}" class="form-horizontal" method="post" onsubmit="return validateForm()">
                 {% if messages %}
                 <div class="card notification-card notification-invitation">
                     <div class="card-body">

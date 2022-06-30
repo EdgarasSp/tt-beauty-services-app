@@ -50,8 +50,8 @@
                         <li class="nav-item {% if request.resolver_match.view_name == 'portfolio' %}active link{% endif %}">
                             <a class="nav-link active" aria-current="portfolio" href="{% url 'portfolio' %}">Portfolio</a>
                         </li>
-                        <li class="nav-item {% if request.resolver_match.view_name == 'books' %}active link{% endif %}">
-                            <a class="nav-link active" aria-current="booking" href="{% url 'books' %}">Book Online</a>
+                        <li class="nav-item {% if request.resolver_match.view_name == 'booking' %}active link{% endif %}">
+                            <a class="nav-link active" aria-current="booking" href="{% url 'booking' %}">Book Online</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li
@@ -139,7 +139,7 @@
                                 <a href="{% url 'portfolio' %}" class="text-reset">Portfolio</a>
                             </p>
                             <p>
-                                <a href="{% url 'books' %}" class="text-reset">Book Online</a>
+                                <a href="{% url 'booking' %}" class="text-reset">Book Online</a>
                             </p>
                         </div>
                     </div>

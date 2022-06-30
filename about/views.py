@@ -37,7 +37,7 @@ def about_page(request):  ## home
 
 
 class SendContactFormTemplateView(TemplateView):
-    # template_name = 'contact/contact_form.html'
+    template_name = 'index.html'
 
     def post(self, request):
         subject_type = request.POST.get('subject_type')
