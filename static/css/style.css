@@ -1,8 +1,3 @@
-body {
-    /* background-color: #F9FAFC; */
-
-}
-
 main {
     padding-top: 90px;
     margin-bottom: 50px;
@@ -10,9 +5,6 @@ main {
 
 @media (max-width: 990px) {
 
-    /* body {
-      padding-top: 20px;
-    } */
     main {
         margin-bottom: 80px;
         padding-top: 60px;
@@ -25,153 +17,49 @@ main {
     }
 }
 
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
+/* Loading bar */
 
-.red-o {
-    color: #fd458c;
+/* .progress 
+{
+ position: fixed;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height: 100%;
+ z-index: 9999;
+ background-color: #F2F2F2;
 }
-
-.thin {
-    font-weight: 300;
+.bar 
+{ 
+  background-color:#fd458c; 
+  width:0%; 
+  height:5px; 
+  border-radius: 3px; 
 }
-
-.light-bg {
-    background-color: #fff;
+.percent 
+{ 
+  position:absolute; 
+  display:inline-block; 
+  top:3px; 
+  left:48%; 
 }
+#wrapper
+{
+  width:995px;
+  padding:0px;
+  margin:0px auto;
+  font-family:helvetica;
+  text-align:center;
+} */
 
-.dark-bg {
-    background-color: #292929;
-}
-
-.main-bg {
-    /* background-color: #F9FAFC; */
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #fd458c;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.portfolio {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
     width: 100%;
-}
-
-.portfolio-text {
-    background-color: #292929;
-    color: white;
-    position: relative;
-}
-
-.portfolio-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-image:after {
-    position: absolute;
-    top: 0;
-    right: 90%;
     height: 100%;
-    width: 150%;
-    background: #292929;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
-.post-link {
-    text-decoration: none;
-    color: #292929;
-}
-
-.post-link:hover,
-.page-link {
-    color: #fd458c;
-}
-
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup {
-    background-color: #fa89b4;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fd458c;
-    color: #fff;
-}
-
-.link {
-    color: #fd458c;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #fd458c;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
-.navbar {
-    box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, .5);
-}
-
-.nav-link {
-    font-size: large;
-    text-transform: capitalize;
-    color: rgba(22, 19, 19, 0.719);
+    z-index: 9999;
+    background: url(https://i.imgur.com/N6HTFCI.gif) 50% 50% no-repeat rgb(253, 253, 253);
 }
 
 /* Alert message style */
@@ -306,7 +194,7 @@ footer p {
     border-radius: 10% 25% !important;
 }
 
-/* Services -  Rate Card*/
+/* Services -  Rate Card */
 
 .pricing-classic-item {
     display: flex;
@@ -507,51 +395,146 @@ footer p {
 }
 
 
-/* Loading bar */
+/* portfolio */
+.red-o {
+    color: #fd458c;
+}
 
-/* .progress 
-{
- position: fixed;
- left: 0px;
- top: 0px;
- width: 100%;
- height: 100%;
- z-index: 9999;
- background-color: #F2F2F2;
+.thin {
+    font-weight: 300;
 }
-.bar 
-{ 
-  background-color:#fd458c; 
-  width:0%; 
-  height:5px; 
-  border-radius: 3px; 
+
+.light-bg {
+    background-color: #fff;
 }
-.percent 
-{ 
-  position:absolute; 
-  display:inline-block; 
-  top:3px; 
-  left:48%; 
+
+.dark-bg {
+    background-color: #292929;
 }
-#wrapper
-{
-  width:995px;
-  padding:0px;
-  margin:0px auto;
-  font-family:helvetica;
-  text-align:center;
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #fd458c;
+}
+
+.card-body-height{
+    height: 550px !important;
+}
+
+.portfolio {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.portfolio-text {
+    background-color: #292929;
+    color: white;
+    position: relative;
+}
+
+.portfolio-image {
+    position: relative;
+    height: 100vh;
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    overflow: hidden;
+}
+
+/* .portfolio-image:after {
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #292929;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
 } */
 
-.loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: url(https://i.imgur.com/N6HTFCI.gif) 50% 50% no-repeat rgb(253, 253, 253);
+.post-link {
+    text-decoration: none;
+    color: #292929;
 }
 
+.post-link:hover,
+.page-link {
+    color: #fd458c;
+}
+
+.post-title {
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+.btn-signup {
+    background-color: #fa89b4;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fd458c;
+    color: #fff;
+}
+
+.link {
+    color: #fd458c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #fd458c;
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
+
+.navbar {
+    box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, .5);
+}
+
+.nav-link {
+    font-size: large;
+    text-transform: capitalize;
+    color: rgba(22, 19, 19, 0.719);
+}
 
 /* forms */
 
@@ -607,6 +590,8 @@ footer p {
     background-size: cover;
     background-image: url("https://i.imgur.com/WX3RsCGh.jpg");
 }
+
+/* map and video size */
 
 iframe{
     width: 42vh;

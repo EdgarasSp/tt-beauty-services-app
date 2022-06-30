@@ -2,19 +2,28 @@
 {% load crispy_forms_tags %}
 
 <!--portfolio card start-->
-<div class="portfolio">
+<div class="container">
     <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 portfolio-text">
-                <h1 class="post-title">{{ post.title }}</h1>
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+        <div class="row g-0 h-100">
+            <div class="col-md-6 ">
+                <div>
+                    <h1 class="post-title">{{ post.title }}</h1>
+                    <p class="hot-pink-text">{{ post.author }} | {{ post.created_on }}</p>
+                </div>
+                <div>
+                    <div class="card-body">
+                        <p class="card-text ">
+                            {{ post.content | safe }}
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="d-none d-md-block col-md-6 portfolio-image">
+            <div class=" col-md-6 portfolio-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://i.imgur.com/XkAPsbJ.jpg" alt="portfolio placeholder image">
+                <img class="portfolio-image" src="https://i.imgur.com/XkAPsbJ.jpg" alt="portfolio placeholder image">
                 <!--width="100%"-->
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" alt="portfolio image">
+                <img class="portfolio-image" src=" {{ post.featured_image.url }}" alt="portfolio image">
                 <!--width="100%"-->
                 {% endif %}
             </div>
@@ -25,35 +34,30 @@
 <!--portfolio post start-->
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <p class="card-text ">
-                    {{ post.content | safe }}
-                </p>
-                <div class="row">
-                    <div class="col-1 font-weight-bold">
-                        {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                            {% csrf_token %}
-                            {% if liked %}
-                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                    class="fas fa-heart"></i></button>
-                            {% else %}
-                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                    class="far fa-heart"></i></button>
-                            {% endif %}
-                        </form>
+        <div class="col card mb-4 mt-3 left top">
+            <div class="row">
+                <div class="col-1 font-weight-bold">
+                    {% if user.is_authenticated %}
+                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                class="fas fa-heart"></i></button>
                         {% else %}
-                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                class="far fa-heart"></i></button>
                         {% endif %}
-                        <span class="text-secondary"> {{ post.number_of_likes }}</span>
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
+                    </form>
+                    {% else %}
+                    <span class="text-secondary"><i class="far fa-heart"></i></span>
+                    {% endif %}
+                    <span class="text-secondary"> {{ post.number_of_likes }}</span>
+                </div>
+                <div class="col-1">
+                    {% with comments.count as total_comments %}
+                    <strong class="text-secondary"><i class="far fa-comments"></i>
+                        {{ total_comments }}</strong>
+                    {% endwith %}
                 </div>
             </div>
         </div>
@@ -94,7 +98,7 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-signup mt-2">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}
