@@ -13,7 +13,6 @@ class SendBookingFormTemplateView(TemplateView):
     template_name = 'index.html'
 
     def post(self, request):
-        print(request)
         service = request.POST.get('service')
         service_location = request.POST.get('service_location')
         first_name = request.POST.get('first_name')
@@ -22,10 +21,8 @@ class SendBookingFormTemplateView(TemplateView):
         email_address = request.POST.get('email_address')
         message_problems = request.POST.get('message_problems')
 
-
-
         booking_form = Booking.objects.create(
-            service = service,
+            service=service,
             service_location=service_location,
             first_name=first_name,
             last_name=last_name,
@@ -33,8 +30,9 @@ class SendBookingFormTemplateView(TemplateView):
             email_address=email_address,
             message_problems=message_problems,
         )
+        
         booking_form.save()
 
-        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name} {last_name}. For your message.")
+        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name}. For your booking, we will contact you shortly to confirm.")
         return HttpResponseRedirect(request.path)
 

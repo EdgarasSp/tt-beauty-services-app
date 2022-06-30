@@ -274,7 +274,7 @@ footer p {
 .hero-banner .btn-primary {
     color: #2f2f41;
     background-color: rgba(1, 164, 121, 0.1);
-    border-color: #01a479;
+    /* border-color: #01a479; */
 }
 
 .hero-banner .btn:before {
