@@ -36,5 +36,5 @@ class SendBookingFormTemplateView(TemplateView):
 
         messages.add_message(
             request, messages.SUCCESS, f"Thank you {first_name}."
-            f"For your booking, we will contact you shortly to confirm.")
+            f" For your booking, we will contact you shortly to confirm.")
         return HttpResponseRedirect(request.path)

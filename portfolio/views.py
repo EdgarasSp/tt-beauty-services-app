@@ -4,8 +4,10 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 
-def home_page(request):  ## added
-    return render(request, 'index.html') ## respods but not a link
+
+def home_page(request):
+    return render(request, 'index.html')
+
 
 class PostList(generic.ListView):
     model = Post
@@ -13,7 +15,8 @@ class PostList(generic.ListView):
     template_name = "portfolio.html"
     paginate_by = 6
 
-class PostDetail(View): 
+
+class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -66,8 +69,9 @@ class PostDetail(View):
             },
         )
 
+
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
