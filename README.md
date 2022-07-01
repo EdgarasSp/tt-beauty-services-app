@@ -364,10 +364,44 @@ Scored between 95 - 100 on every page.
 
 #### SEO
 
-The SEO score tended to be around 90 addee
+The SEO score tended to be around 90.
 
 #### Screenshot from dev tools
 
 I was getting notification warning about Chrome extensions affecting results, even in icognito mode.
 
 ![Dev-tools](https://i.imgur.com/lSNGt6ah.png)
+
+
+## Technologies Used
+
+### Languages Used
+
+* HTML5
+* CSS3
+* JavaScript
+* Python 3
+
+### Frameworks, Libraries and Programs Used
+
+* [Bootstrap 5.0.2](https://getbootstrap.com/) - Used for responsive layout, flexbox and several components e.g. cards, navbar, form elements.
+* [jQuery](https://jquery.com/) - Used for interactive elements on the DOM and to simplify JavaScript use
+* [Fontawesome](https://fontawesome.com/) - This was used for all icons on the page
+* [Google Fonts](https://fonts.google.com/) - To get fonts
+* [Git](https://git-scm.com/) - Used for version control
+* [Gitpod](https://gitpod.io/) - Text editor used to write all code
+* [Github](https://github.com/) - GitHub is used to store the project's code after being pushed from Git
+* [Heroku](https://id.heroku.com/) - Used to deploy website - Heroku PostgreSQL used for relational database in deployed site
+* [Balsamiq](https://balsamiq.com/) - Used to create the wireframe
+* [Compressjpeg](https://compressjpeg.com/) - Used to compress images
+* [Google Maps](https://maps.google.com/) - Used to embed maps
+* [tabletomarkdown](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ ) - Used to convert spreadsheet tables to markdown for use in this readme
+* [Cloudinary)](https://cloudinary.com/) - Used to store media files
+
+
+#### Validation Programs Used
+
+* [W3C HTML Validator](https://validator.w3.org/) - Used to validate HTML file
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to validate CSS file
+* [JS Hint](https://jshint.com/) - Used to validate JavaScript code
+* [PEP8 Online](http://pep8online.com/) - used to validate Python code
