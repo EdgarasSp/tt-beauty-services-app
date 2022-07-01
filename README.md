@@ -2,11 +2,11 @@
 
 ## About
 
-This project is a simple website for a beauty salon. It allows visitors to view services,locations, submit questions, book appointments and comment to a portfolio blog on the website. Users must be logged in and authenticated to make a posts.
+This project is a simple website for a beauty salon. It allows visitors to view services, locations, submit questions, book appointments and comment to a portfolio blog on the website. Users must be logged in and authenticated to make a posts.
 
 It uses HTML, CSS and JavaScript for the front end and makes use of Python and the Django framework for the backend, which also uses the PostgreSQL relational database.
 
-A quick note regarding difficulties I had with this project. The ideas planned for the site were much greater, but I was struggling with so many things during this time and was not in a good place. I have made my best attemt to deliver the project in the time remaining. It's not the best project but I have learned so much and feel much more motivated to deliver great site experiance in the future project. With some support from my employer agreening additional time off to let me focus and complete the studies and my family to help with new born.
+A quick note regarding difficulties I had with this project. The ideas planned for the site were much greater, but I was struggling with so many things during this time and was not in a good place. I have made my best attempt to deliver the project in the time remaining. It's not the best project but I have learned so much and feel much more motivated to deliver great site experience in the future project. With some support from my employer agreeing additional time off to let me focus and complete the studies and my family to help with new born.
 
 ### Mockup
 #
@@ -16,8 +16,8 @@ A quick note regarding difficulties I had with this project. The ideas planned f
 #
 ### Purpose
 #
-Website is more targeted torwards women needs, but options availabe to both men and children.
-With certain design choices and information within website any visitor should instantly recognise the purpose of the site, and to feel compfortable to browse and explore the website.
+Website is more targeted towards women needs, but options available to both men and children.
+With certain design choices and information within website any visitor should instantly recognise the purpose of the site, and to feel comfortable to browse and explore the website.
 
 Based on site being open to all, the user stories below are non-specific regarding demographic and only differentiate whether a user is a first time visitor, a general visitor or a existing user.
 #
@@ -47,7 +47,7 @@ The site has a simple layout, designed with Bootstrap framework.
 
 The navbar always sits at the top of each page, taking the user to all the site sections they can access. Only the pages relevant to the user are displayed e.g. a logged-in user will not see a link to the 'login' page as they are logged in. Equally, a logged out user will not see a link to the 'logout' page as they are already logged out.
 
-Pages designed with minimalist aproach to not overcrowed with uneccassry details or images. Page links and interactive elements are marked. Buttons have a colour scheme and if feedback required the 'positive' feedback popup have pink background, 'negative' have red background. This is the Bootstrap colour library (success and danger) but with the colours amendedmets to be inline with web page theme.
+Pages designed with minimalist approach to not overcrowded with unnecessary details or images. Page links and interactive elements are marked. Buttons have a colour scheme and if feedback required the 'positive' feedback popup have pink background, 'negative' have red background. This is the Bootstrap colour library (success and danger) but with the colours amendments to be inline with web page theme.
 #
 ### Wireframe
 #
@@ -70,11 +70,10 @@ The palette for this project was light pink. Dominant color was matched against 
 Dominant color was generated using [ColorSpace](https://mycolor.space.com).
 
 Website color pallet:
-* Dominant:		[#fd458c](https://mycolor.space/?hex=%23fd458c&sub=1)
-* Complement: 	[#feebf2](https://mycolor.space/?hex=%23feebf2&sub=1)
-* Text A: 		[#292929](https://mycolor.space/?hex=%23292929&sub=1)
-* Text B: 		[#2b2a2a](https://mycolor.space/?hex=%232b2a2a&sub=1)
-
+* Dominant:     [#fd458c](https://mycolor.space/?hex=%23fd458c&sub=1)
+* Complement:   [#feebf2](https://mycolor.space/?hex=%23feebf2&sub=1)
+* Text A:       [#292929](https://mycolor.space/?hex=%23292929&sub=1)
+* Text B:       [#2b2a2a](https://mycolor.space/?hex=%232b2a2a&sub=1)
 
 #
 ## Database Model
@@ -150,15 +149,15 @@ approved          |BooleanField    |auto_now_add=True
 
 ### Home Page
 #
-Upon entering the home page of the website, the user sees a large hero image carousel, which displays helpful mesages encouraging to book an appointmnet, view services or contact us as a call to action button. 
+Upon entering the home page of the website, the user sees a large hero image carousel, which displays helpful messages encouraging to book an appointment, view services or contact us as a call to action button. 
 
 ![index-hero](https://i.imgur.com/nC1oBudh.png)
 
-Scrolling down takes the user to the 'Why Choose Us' section of the page. The page features a brief text with info for the user and links to 'View Services' or 'Book Now". Also, displayes few pictures inline with the page theme.
+Scrolling down takes the user to the 'Why Choose Us' section of the page. The page features a brief text with info for the user and links to 'View Services' or 'Book Now". Also, displays few pictures inline with the page theme.
 
 ![index-2](https://i.imgur.com/tIC6kihh.png)
 
-Scrolling down further takes the user to the 'Product' section of the page. The page features 3 promoted products with a brief text description with info for the user. Section also, displayes a video from the salon showcasing one of the procedure.
+Scrolling down further takes the user to the 'Product' section of the page. The page features 3 promoted products with a brief text description with info for the user. Section also, displays a video from the salon showcasing one of the procedure.
 
 ![index-3](https://i.imgur.com/qOPZxhxh.png)
 
@@ -166,18 +165,17 @@ Next is a 'Feedback' section of the page. The page features 3 most resent review
 
 ![index-4](https://i.imgur.com/4GDOqZ3h.png)
 
-The final part of the home page is a 'Contact Form' for user to fill should they want to contact us. From has preset choice list to help with query routing.
+The final part of the home page is a 'Contact Form' for user to fill should they want to contact us. From has present choice list to help with query routing.
 
 ![index-5](https://i.imgur.com/A5xBk8ch.png)
 #
 ### About Page
 #
-The first part of the about page contains contact address and furtehr contact details for both locations. This section also has a portait picture of one of the stylists.
+The first part of the about page contains contact address and further contact details for both locations. This section also has a portrait picture of one of the stylists.
 
 ![about-1](https://i.imgur.com/KtEpvMuh.png)
 
-Second part of the about page contains embeded google map iframe with marked salon location. To the side of the map with a brief positive text description about the Salon.
-
+Second part of the about page contains embedded google map iframe with marked salon location. To the side of the map with a brief positive text description about the Salon.
 
 ![about-2](https://i.imgur.com/0RZ59bgh.png)
 
@@ -187,16 +185,14 @@ The final part of the home page is a 'Contact Form'
 
 #### Contact Success
 
-
-Once the contact form is submited, the user is redirected to the home page. The page will show sucess pop up at the top confirming top the user that the form has been submited sucesfully.
+Once the contact form is submitted, the user is redirected to the home page. The page will show success pop up at the top confirming top the user that the form has been submitted successfully.
 
 ![pop up](https://i.imgur.com/KGQ1Ccgh.png)
-
 
 #
 ### Service Page
 #
-The Service page contains all the info a user needs about the services provided, as well as allowing them view the prices for the services. First section contains a small hero image of the stylist at the top of the page, with a description and a action button to book and appointmnet.
+The Service page contains all the info a user needs about the services provided, as well as allowing them view the prices for the services. First section contains a small hero image of the stylist at the top of the page, with a description and a action button to book and appointment.
 
 ![resort-detail1](https://i.imgur.com/9g3YL7Eh.png)
 
@@ -204,11 +200,11 @@ Scrolling down takes the user to the 'Services & Prices' section of the page. Th
 
 ![ski-map1](https://i.imgur.com/WDV1LMAh.png)
 
-Scrolling down further takes the user to the 'Team' section of the page. The section features short description of the team and showcaing stylist in action.
+Scrolling down further takes the user to the 'Team' section of the page. The section features short description of the team and showcasing stylist in action.
 
 ![ski-map2](https://i.imgur.com/iIqrsqFh.png)
 
-The last section is a "FAQ". This section contains most asked questions with answers provided below utilising accordion bootsrap design.
+The last section is a "FAQ". This section contains most asked questions with answers provided below utilising accordion bootstrap design.
 
 ![ski-map2](https://i.imgur.com/69cJK9Nh.png)
 
@@ -225,7 +221,7 @@ Portfolio detail pages can be accessed by any user to view published existing po
 
 ![blog-detail](https://i.imgur.com/VwDn4cQh.png)
 
- Each portfolio blog has a comment section where an authenticated user can leave their feedback on a blog. Any user can see blog comments, but only authenticated users can post them. The superuser has the authority to approve, delete a comment. If user is not authenticated, instead of having a text box tehy will be promted to register or login first. Once loged in, the text box will be displayed.
+ Each portfolio blog has a comment section where an authenticated user can leave their feedback on a blog. Any user can see blog comments, but only authenticated users can post them. The superuser has the authority to approve, delete a comment. If user is not authenticated, instead of having a text box they will be prompted to register or login first. Once logged in, the text box will be displayed.
 
 ![comments](https://i.imgur.com/sEdKi39h.png)
 
@@ -233,15 +229,13 @@ Portfolio detail pages can be accessed by any user to view published existing po
 ### Booking Page
 #
 
-The Booking page contains a 'Make Appointment Form' for user to fill should when they want to book an appointment. Form has preset choice list to help with service routing.
+The Booking page contains a 'Make Appointment Form' for user to fill should when they want to book an appointment. Form has present choice list to help with service routing.
 
 ![booking](https://i.imgur.com/7T24u05h.png)
 
-
 #### Booking Success
 
-
-Once the form is completed, the user is redirected to the home page. The page will show sucess pop up at the top confirming top the user that the form has been submited sucesfully.
+Once the form is completed, the user is redirected to the home page. The page will show success pop up at the top confirming top the user that the form has been submitted successfully.
 
 ![pop up](https://i.imgur.com/8MPS4UHh.png)
 
@@ -257,7 +251,6 @@ If a user enters invalid data (i.e. username already taken/passwords do not matc
 
 ![register](https://i.imgur.com/BlephGYh.png)
 
-
 #
 ### Sign In
 #
@@ -265,13 +258,6 @@ If a user enters invalid data (i.e. username already taken/passwords do not matc
 A registered user can sign in from the sign-in page. A user can enter either their username or email along with the password.
 
 ![sign-in](https://i.imgur.com/LPPNUOuh.png)
-
-
-### Add Blog Post - REPURPOSE   
-
-If a user selects the 'add blog post' button from the blog page, they are taken to the 'new blog' page. This button and page are only accessible for authenticated users. The page contains a simple form, allowing a user to add a short blog post. The title and content fields are mandatory. The database automatically stores the current time and the authenticated user (author) upon form submission.
-
-This page fulfills user story 19 :heavy_check_mark:
 
 #
 ### Navigation and Responsiveness
@@ -285,18 +271,17 @@ The site uses a simple Bootstrap responsive navbar. All sections of the site can
 
 The site can be improved with:
 
-* Better appointmnet management allowing stylist to create availability schedule and site visitors to book available slots based on the service choosen.
+* Better appointment management allowing stylist to create availability schedule and site visitors to book available slots based on the service chosen.
 
-Additionally it woul be  grate to create profile page to allow users to:
+Additionally it would be grate to create profile page to allow users to:
 
 * View and mange booked appointments
-* Receive loyalty points for future sicounts
+* Receive loyalty points for future discounts
 
 Site would also benefit with:
-* payment processor
-* disount/coupon process.
-* email comunication workflow
-
+* Payment processor
+* discount/coupon process.
+* Email communication workflow
 
 #
 ## Device and Browser Testing
@@ -316,23 +301,23 @@ Site would also benefit with:
 
 #### CSRF Verification Failed.
 
-During porject development I received CSRF Verification Failed error when submiting forms. After checking code for hours I have found out that this error only occures uf istalled Django 4. After checking my Django version had to downgrade Django to 3.2 an dthe error was cleared.
+During project development I received CSRF Verification Failed error when submitting forms. After checking code for hours I have found out that this error only occurs if installed Django 4. After checking my Django version had to downgrade Django to 3.2 and the error was cleared.
 
 ![sign-in](https://i.imgur.com/OIo9j5jh.png)
 #
 #### Could not build wheels for backports.zoneinfo
 
-After deploying app to Heroku, it was failing to build. After reviewing the logs found error "Could not build wheels for backports.zoneinfo" After some reaserch on Google found solution on StackOverflow. Solution noted that Heroku fails to install correction python version, to bypass this error a runtime.tx file was created in root directory containing single line of code defining python version for heroku to install "python-3.8.10".
+After deploying app to Heroku, it was failing to build. After reviewing the logs found error "Could not build wheels for backports.zoneinfo" After some research on Google found solution on Stack Overflow. Solution noted that Heroku fails to install correction python version, to bypass this error a runtime.tx file was created in root directory containing single line of code defining python version for Heroku to install "python-3.8.10".
 
-After this app deployed sucesfully.
+After this app deployed successfully.
 
 ![sign-in](https://i.imgur.com/xedjxGLh.png)
 #
 #### Forms not posting to admin
 
-After I created the first form, when tried to post data would not appear on Django Admin. The app was visable, the form data fields were pressent on Admin and I was able to add data directly via Admin. The forms were included via: {% include "contact/contact_form.html" %} command. 
+After I created the first form, when tried to post data would not appear on Django Admin. The app was visible, the form data fields were present on Admin and I was able to add data directly via Admin. The forms were included via: {% include "contact/contact_form.html" %} command. 
 
-After checking rewriting the forms and many hours of reading found out that the form needed additonal parameter within "Form" element to make data post correctly: action="{% url 'contact_form'%}". After adding this data was posting correctly.
+After checking rewriting the forms and many hours of reading found out that the form needed additional parameter within "Form" element to make data post correctly: action="{% url 'contact_form'%}". After adding this data was posting correctly.
 
 ### Code Validation
 
@@ -344,10 +329,14 @@ After checking rewriting the forms and many hours of reading found out that the 
 
   ![css-validation](https://i.imgur.com/WYsFvlkh.png)
 
-* [JS Hint](https://i.imgur.com/5TrZYoSh.png) found no serious JavaScript errors throughout my files. There were a couple suggested use of dot notation:
+* [JS Hint](https://jshint.com/) found no serious JavaScript errors throughout my files. There were a couple suggested use of dot notation:
+
+![JS Hint](https://i.imgur.com/WYsFvlkh.png)
 
 * [PEP8 Online](http://pep8online.com/) found no Python errors throughout my files, except for settings.py. This is a known issue with the built-in Django settings file, but it is acceptable not to force a line break here.
   - line too long (>79 characters) - AUTH_PASSWORD_VALIDATORS = [{}] x4
+
+  ![PEP8](https://i.imgur.com/J7B1kfIh.png)
 
 ### Chrome Dev Tools Lighthouse
 
@@ -355,8 +344,7 @@ Chrome dev tools lighthouse was used to test the site for performance, accessibi
 
 #### Performance
 
-Performance was consistently good throughout all pages, only being slowed down slightly by images (which were already compressed), external embeded youtube video, and external JavaScript resources such as JQuery.
-
+Performance was consistently good throughout all pages, only being slowed down slightly by images (which were already compressed), external embedded YouTube video, and external JavaScript resources such as JQuery.
 
 #### Best Practises
 
@@ -368,10 +356,9 @@ The SEO score tended to be around 90.
 
 #### Screenshot from dev tools
 
-I was getting notification warning about Chrome extensions affecting results, even in icognito mode.
+I was getting notification warning about Chrome extensions affecting results, even in incognito mode.
 
 ![Dev-tools](https://i.imgur.com/lSNGt6ah.png)
-
 
 ## Technologies Used
 
@@ -398,14 +385,12 @@ I was getting notification warning about Chrome extensions affecting results, ev
 * [tabletomarkdown](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ ) - Used to convert spreadsheet tables to markdown for use in this readme
 * [Cloudinary)](https://cloudinary.com/) - Used to store media files
 
-
 #### Validation Programs Used
 
 * [W3C HTML Validator](https://validator.w3.org/) - Used to validate HTML file
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to validate CSS file
 * [JS Hint](https://jshint.com/) - Used to validate JavaScript code
 * [PEP8 Online](http://pep8online.com/) - used to validate Python code
-
 
 ## Deployment
 
@@ -541,7 +526,6 @@ Follow the below steps to deploy the project on Heroku:
     - First, sign up for a free [Cloudinary](https://cloudinary.com//)
     - Go to your dashboard and copy your API key
 
-
 11. Finally, you need to update the config vars for the deployed project under the 'settings' tab of your Heroku app.
 
        Name | Value
@@ -560,20 +544,19 @@ Follow the below steps to deploy the project on Heroku:
 
 The project is influenced by the Code Institute Django tutorial series. These were the most efficient and obvious ways to implement the necessary functionality in my project.
 
-
 ### Content and Images
 
-* The  images used for the webpage were all taken from the offical [Pexels](https://www.pexels.com/) website. Images i used are stored in my [Pexels collection](https://www.pexels.com/collections/beauty-wkxbc8d/) with appropriately credits.
+* The  images used for the webpage were all taken from the official [Pexels](https://www.pexels.com/) website. Images I used are stored in my [Pexels collection](https://www.pexels.com/collections/beauty-wkxbc8d/) with appropriately credits.
 
-* Video was also take from [Pexels](https://www.pexels.com/) and found inside [Pexels collection](https://www.pexels.com/collections/beauty-wkxbc8d/). For embenindg to the site I have hosted it on Youtube.
+* Video was also take from [Pexels](https://www.pexels.com/) and found inside [Pexels collection](https://www.pexels.com/collections/beauty-wkxbc8d/). For embedding to the site I have hosted it on YouTube.
 
 * Also would like to credit my sister in law as she is a hair dresser and helped with some text content.
 
 ### Acknowledgements
-
 
 * [W3 Schools](https://www.w3schools.com/)
 * [Stackoverflow](https://stackoverflow.com/)
 * [Bootsrap](https://getbootstrap.com//)
 * [Django Documentation](https://docs.djangoproject.com/en/3.2/)
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
+
