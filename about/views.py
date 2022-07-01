@@ -35,6 +35,7 @@ class SendContactFormTemplateView(TemplateView):
 
         contact_form.save()
 
-        messages.add_message(request, messages.SUCCESS ,
-                            f"Thank you {first_name} . For your message we will reply within 24h.")
+        messages.add_message(
+            request, messages.SUCCESS, f"Thank you {first_name}."
+            f"For your message, we will reply within 24 hours.")
         return HttpResponseRedirect(request.path)

@@ -6,8 +6,10 @@ import datetime
 import time
 from .models import Booking
 
-def booking_page(request):  ## home
+
+def booking_page(request):
     return render(request, 'bookings.html')
+
 
 class SendBookingFormTemplateView(TemplateView):
     template_name = 'index.html'
@@ -30,9 +32,9 @@ class SendBookingFormTemplateView(TemplateView):
             email_address=email_address,
             message_problems=message_problems,
         )
-        
         booking_form.save()
 
-        messages.add_message(request, messages.SUCCESS, f"Thank you {first_name}. For your booking, we will contact you shortly to confirm.")
+        messages.add_message(
+            request, messages.SUCCESS, f"Thank you {first_name}."
+            f"For your booking, we will contact you shortly to confirm.")
         return HttpResponseRedirect(request.path)
-
