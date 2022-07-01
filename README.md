@@ -331,7 +331,7 @@ After checking rewriting the forms and many hours of reading found out that the 
 
 * [JS Hint](https://jshint.com/) found no serious JavaScript errors throughout my files. There were a couple suggested use of dot notation:
 
-![JS Hint](https://i.imgur.com/WYsFvlkh.png)
+![JS Hint](https://i.imgur.com/5TrZYoSh.png)
 
 * [PEP8 Online](http://pep8online.com/) found no Python errors throughout my files, except for settings.py. This is a known issue with the built-in Django settings file, but it is acceptable not to force a line break here.
   - line too long (>79 characters) - AUTH_PASSWORD_VALIDATORS = [{}] x4
@@ -348,7 +348,7 @@ Performance was consistently good throughout all pages, only being slowed down s
 
 #### Best Practises
 
-Scored between 95 - 100 on every page.
+Scored between 92 - 100 on every page.
 
 #### SEO
 
@@ -358,7 +358,7 @@ The SEO score tended to be around 90.
 
 I was getting notification warning about Chrome extensions affecting results, even in incognito mode.
 
-![Dev-tools](https://i.imgur.com/lSNGt6ah.png)
+![Dev-tools](https://i.imgur.com/ltmFatXh.png)
 
 ## Technologies Used
 
