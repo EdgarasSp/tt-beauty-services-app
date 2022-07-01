@@ -8,7 +8,7 @@
             <form action="{% url 'contact_form'%}" name="ContactForm" class="form-horizontal" method="post"
                 onsubmit="return validateForm()">
                 <div class="header">
-                    <h1>Contact Us</h1>
+                    <h2>Contact Us</h2>
                 </div>
                 {% if messages %}
                 <div class="card notification-card notification-invitation">
@@ -111,8 +111,8 @@
         </div>
     </div>
 </div>
-    <!-- END OF CONTACT FORM -->
+<!-- END OF CONTACT FORM -->
 
 
 
-    {% endblock content %}
+{% endblock content %}

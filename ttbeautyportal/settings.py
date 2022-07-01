@@ -18,6 +18,9 @@ if os.path.isfile('env.py'):
     import env
 
 
+development = os.environ.get('DEVELOPMENT', False)
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -30,11 +33,17 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+DEBUG = development
 
-ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com', 'localhost']
+if development:
+    ALLOWED_HOSTS = ['localhost']
+else:
+    ALLOWED_HOSTS = [os.environ.get('tt-beauty-services.herokuapp.com')]
+
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com', 'localhost']
 
 # CORS_ORIGIN_WHITELIST = ['https://localhost:8000', 'https://127.0.0.1:8000']
 
@@ -114,16 +123,17 @@ WSGI_APPLICATION = 'ttbeautyportal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-}
+if development:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 
 # Password validation
