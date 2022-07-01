@@ -143,3 +143,156 @@ body              |TextField       |max\_length=100
 created\_on       |DateTimeField   |auto_now_add=True
 approved          |BooleanField    |auto_now_add=True                       
                                                     
+
+#
+## Features
+#
+
+### Home Page
+#
+Upon entering the home page of the website, the user sees a large hero image carousel, which displays helpful mesages encouraging to book an appointmnet, view services or contact us as a call to action button. 
+
+![index-hero](https://i.imgur.com/nC1oBudh.png)
+
+Scrolling down takes the user to the 'Why Choose Us' section of the page. The page features a brief text with info for the user and links to 'View Services' or 'Book Now". Also, displayes few pictures inline with the page theme.
+
+![index-2](https://i.imgur.com/tIC6kihh.png)
+
+Scrolling down further takes the user to the 'Product' section of the page. The page features 3 promoted products with a brief text description with info for the user. Section also, displayes a video from the salon showcasing one of the procedure.
+
+![index-3](https://i.imgur.com/qOPZxhxh.png)
+
+Next is a 'Feedback' section of the page. The page features 3 most resent reviews from the clients. 
+
+![index-4](https://i.imgur.com/4GDOqZ3h.png)
+
+The final part of the home page is a 'Contact Form' for user to fill should they want to contact us. From has preset choice list to help with query routing.
+
+![index-5](https://i.imgur.com/A5xBk8ch.png)
+#
+### About Page
+#
+The first part of the about page contains contact address and furtehr contact details for both locations. This section also has a portait picture of one of the stylists.
+
+![about-1](https://i.imgur.com/KtEpvMuh.png)
+
+Second part of the about page contains embeded google map iframe with marked salon location. To the side of the map with a brief positive text description about the Salon.
+
+
+![about-2](https://i.imgur.com/0RZ59bgh.png)
+
+The final part of the home page is a 'Contact Form'
+
+![about-3](https://i.imgur.com/A5xBk8ch.png)
+
+#### Contact Success
+
+
+Once the contact form is submited, the user is redirected to the home page. The page will show sucess pop up at the top confirming top the user that the form has been submited sucesfully.
+
+![pop up](https://i.imgur.com/KGQ1Ccgh.png)
+
+
+#
+### Service Page
+#
+The Service page contains all the info a user needs about the services provided, as well as allowing them view the prices for the services. First section contains a small hero image of the stylist at the top of the page, with a description and a action button to book and appointmnet.
+
+![resort-detail1](https://i.imgur.com/9g3YL7Eh.png)
+
+Scrolling down takes the user to the 'Services & Prices' section of the page. The section features service list with info for the user and cost of each service line item.
+
+![ski-map1](https://i.imgur.com/WDV1LMAh.png)
+
+Scrolling down further takes the user to the 'Team' section of the page. The section features short description of the team and showcaing stylist in action.
+
+![ski-map2](https://i.imgur.com/iIqrsqFh.png)
+
+The last section is a "FAQ". This section contains most asked questions with answers provided below utilising accordion bootsrap design.
+
+![ski-map2](https://i.imgur.com/69cJK9Nh.png)
+
+#
+### Portfilio Page
+#
+This page shows portfolio blog posts in card form format. The list is paginated with a maximum of 8 blogs shown per page. Portfolio Blog post are added via Django Admin Page. User can click on the card to open the portfolio blog post.
+
+![blog1](https://i.imgur.com/4v2F264h.png)
+
+### Portfolio detailed Page
+
+Portfolio detail pages can be accessed by any user to view published existing portfolio blog post. The page shows the full blog content, date of publication, post likes and comments.
+
+![blog-detail](https://i.imgur.com/VwDn4cQh.png)
+
+ Each portfolio blog has a comment section where an authenticated user can leave their feedback on a blog. Any user can see blog comments, but only authenticated users can post them. The superuser has the authority to approve, delete a comment. If user is not authenticated, instead of having a text box tehy will be promted to register or login first. Once loged in, the text box will be displayed.
+
+![comments](https://i.imgur.com/sEdKi39h.png)
+
+#
+### Booking Page
+#
+
+The Booking page contains a 'Make Appointment Form' for user to fill should when they want to book an appointment. Form has preset choice list to help with service routing.
+
+![booking](https://i.imgur.com/7T24u05h.png)
+
+
+#### Booking Success
+
+
+Once the form is completed, the user is redirected to the home page. The page will show sucess pop up at the top confirming top the user that the form has been submited sucesfully.
+
+![pop up](https://i.imgur.com/8MPS4UHh.png)
+
+#
+### Register
+#
+
+A user can register from the 'register' page. All user registration/login etc is handled by the 'Django-allauth' module.
+
+The layout is simple. The inputs prompt the user to enter and confirm their email address, provide a username, and enter and confirm a password.
+
+If a user enters invalid data (i.e. username already taken/passwords do not match etc) then the form will not submit and the errors will be displayed in the relevant location on the screen.
+
+![register](https://i.imgur.com/BlephGYh.png)
+
+
+#
+### Sign In
+#
+
+A registered user can sign in from the sign-in page. A user can enter either their username or email along with the password.
+
+![sign-in](https://i.imgur.com/LPPNUOuh.png)
+
+
+### Add Blog Post - REPURPOSE   
+
+If a user selects the 'add blog post' button from the blog page, they are taken to the 'new blog' page. This button and page are only accessible for authenticated users. The page contains a simple form, allowing a user to add a short blog post. The title and content fields are mandatory. The database automatically stores the current time and the authenticated user (author) upon form submission.
+
+This page fulfills user story 19 :heavy_check_mark:
+
+#
+### Navigation and Responsiveness
+#
+
+The site uses a simple Bootstrap responsive navbar. All sections of the site can be reached from here. Logout for an authenticated user, and register/sign in for an unauthenticated user. The navbar menu items can be found within the standard 'hamburger' menu icon on smaller devices.
+
+#
+### Future Features
+#
+
+The site can be improved with:
+
+* Better appointmnet management allowing stylist to create availability schedule and site visitors to book available slots based on the service choosen.
+
+Additionally it woul be  grate to create profile page to allow users to:
+
+* View and mange booked appointments
+* Receive loyalty points for future sicounts
+
+Site would also benefit with:
+* payment processor
+* disount/coupon process.
+* email comunication workflow
