@@ -405,3 +405,151 @@ I was getting notification warning about Chrome extensions affecting results, ev
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to validate CSS file
 * [JS Hint](https://jshint.com/) - Used to validate JavaScript code
 * [PEP8 Online](http://pep8online.com/) - used to validate Python code
+
+
+## Deployment
+
+### Cloning the Repository
+
+To clone the repository please follow the below steps. It is recommended to work in a virtual environment i.e. Gitpod, however, the project can also be run on a local system.
+
+If working on the project locally, you must install the following:
+
+* [Python](https://www.python.org/downloads/)
+* [Pip](https://pip.pypa.io/en/stable/installation/)
+* [Git](https://www.atlassian.com/git/tutorials/install-git)
+* An IDE to develop your project, for example [VS Code](https://code.visualstudio.com/)
+
+1. Log in to GitHub and locate the [GitHub Repository](hhttps://github.com/EdgarasSp/tt-beauty-services-app)
+
+2. Under the repository name, click "Clone or download".
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+
+4. Open Git Bash
+
+5. Change the current working directory to the location where you want the cloned directory to be made.
+
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+Alternatively, you can enter the following command into the Git CLI terminal of your dev environment:
+
+```
+$ git clone https://github.com/EdgarasSp/tt-beauty-services-app.git
+
+```
+
+Then you must navigate to the correct file location using the following command in the CLI terminal:
+
+```
+$ cd <path to folder>
+```
+
+### Local Deployment
+
+Follow the below steps to deploy the project locally:
+
+1. Install all project requirements using the below command in the CLI terminal:
+
+    ```
+    $ pip3 install -r requirements.txt
+    ```
+2. Launch the Django Project using the below command in the CLI terminal:
+
+    ```
+    $ python3 manage.py runserver
+    ```
+
+3. The server should now be running locally on [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Running the server should also create a new SQLite3 database file: db.sqlite3
+
+4. Create an env.py file for the following requirements, or if using Gitpod, you can enter these variables within the settings section of your GitHub account. Remember to restart the workspace after creating the variables:
+
+    Name | Value
+    -----|------
+    DATABASE_URL|'your postgres db url'
+    SECRET_KEY|'your secret key'
+    CLOUDINARY_URL|'your cloudinary API'
+
+5. You will need to make migrations to create the local database using the following commands in the CLI terminal:
+
+    ```
+    $ python3 manage.py makemigrations
+    ```
+    ```
+    $ python3 manage.py migrate
+    ```
+
+6. Now create a superuser to gain access to the Django Admin page using the following command in the CLI terminal, then follow the automatic prompts to create a username, email address and password:
+
+    ```
+    $ python3 manage.py createsuperuser
+    ```
+
+7. The project should now run as expected within your local development environment :)
+
+### Deploying to Heroku
+
+Follow the below steps to deploy the project on Heroku:
+
+1. Create a GitHub repository for the app
+
+2. Initialize git for the app by using the below command in the terminal:
+
+    ```
+    $ git init
+    ```
+
+3. To link the project to your new GitHub repository, use the following commands in the terminal:
+
+    ```
+    $ git remote add origin https://github.com/<USERNAME>/<REPONAME>.git
+    $ git push -u origin master
+    ```
+    From now on any further pushes will be automatically pushed to this location.
+
+4. Create a new file called 'Procfile' within the root directory of the project and enter the following content:
+
+    ```
+    web: gunicorn ttbeautyportal.wsgi:application
+    ```
+
+5. Create a requirements.txt file for Heroku to install the required dependencies using the following command:
+
+    ```
+    $ pip3 freeze > requirements.txt
+    ```
+
+6. Create a Heroku account, create a new app and select your local region based on your location.
+
+7. Enter the 'Deploy' tab within your Heroku app, select GitHub as the deployment method. Choose the GitHub repository from your account as the default connection. Select automatic deployment. The app should push to Heroku 
+
+8. Enter the 'Resources' tab and search for 'Heroku Postgres'. Add this to your app, selecting the 'Hobby' level for free access.
+
+9. Now you need to rebuild the migrations to the new database using the below commands:
+    First, you need to login to your Heroku account in the CLI using:
+    ```
+    $ heroku login -i
+    ```
+    Now enter your Heroku email address and password, then enter the following to the CLI terminal:
+    ```
+    $ heroku run python3 manage.py migrate
+    ```
+    ```
+    $ heroku run python3 manage.py createsuperuser
+    ```
+10. Now you need to set up Cloudinary for media file hosting.
+    - First, sign up for a free [Cloudinary](https://cloudinary.com//)
+    - Go to your dashboard and copy your API key
+
+
+11. Finally, you need to update the config vars for the deployed project under the 'settings' tab of your Heroku app.
+
+       Name | Value
+    -----|------
+    DATABASE_URL|'your postgres db url'
+    SECRET_KEY|'your secret key'
+    CLOUDINARY_URL|'your cloudinary API'
+
+    The Database URL can be found within your PostgreSQL credentials.
+
+12. Congratulations, the project should now be deployed and ready to use :)
