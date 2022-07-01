@@ -296,3 +296,78 @@ Site would also benefit with:
 * payment processor
 * disount/coupon process.
 * email comunication workflow
+
+
+#
+## Device and Browser Testing
+#
+
+* Chrome developer tools used throughout development to check usability on different devices/sizes.
+
+* Personal devices used to check usability and appearance after deployment Google Pixel 6
+
+* Friends and family asked to check usability on their Apple mobile, laptop, desktop, and tablet devices, particularly to check usability on Safari browser
+
+* Browsers checked were Chrome, Firefox, Edge and Safari
+
+#
+### Bugs
+#
+
+#### CSRF Verification Failed.
+
+During porject development I received CSRF Verification Failed error when submiting forms. After checking code for hours I have found out that this error only occures uf istalled Django 4. After checking my Django version had to downgrade Django to 3.2 an dthe error was cleared.
+
+![sign-in](https://i.imgur.com/OIo9j5jh.png)
+#
+#### Could not build wheels for backports.zoneinfo
+
+After deploying app to Heroku, it was failing to build. After reviewing the logs found error "Could not build wheels for backports.zoneinfo" After some reaserch on Google found solution on StackOverflow. Solution noted that Heroku fails to install correction python version, to bypass this error a runtime.tx file was created in root directory containing single line of code defining python version for heroku to install "python-3.8.10".
+
+After this app deployed sucesfully.
+
+![sign-in](https://i.imgur.com/xedjxGLh.png)
+#
+#### Forms not posting to admin
+
+After I created the first form, when tried to post data would not appear on Django Admin. The app was visable, the form data fields were pressent on Admin and I was able to add data directly via Admin. The forms were included via: {% include "contact/contact_form.html" %} command. 
+
+After checking rewriting the forms and many hours of reading found out that the form needed additonal parameter within "Form" element to make data post correctly: action="{% url 'contact_form'%}". After adding this data was posting correctly.
+
+### Code Validation
+
+* [W3C HTML Validator](https://validator.w3.org/) found no HTML errors throughout the site - result for home page shown below
+
+  ![html-validation](https://i.imgur.com/ta2lfbsh.png)
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) found no CSS errors throughout my files - result for all CSS shown below
+
+  ![css-validation](https://i.imgur.com/WYsFvlkh.png)
+
+* [JS Hint](https://i.imgur.com/5TrZYoSh.png) found no serious JavaScript errors throughout my files. There were a couple suggested use of dot notation:
+
+* [PEP8 Online](http://pep8online.com/) found no Python errors throughout my files, except for settings.py. This is a known issue with the built-in Django settings file, but it is acceptable not to force a line break here.
+  - line too long (>79 characters) - AUTH_PASSWORD_VALIDATORS = [{}] x4
+
+### Chrome Dev Tools Lighthouse
+
+Chrome dev tools lighthouse was used to test the site for performance, accessibility, best practices and SEO.
+
+#### Performance
+
+Performance was consistently good throughout all pages, only being slowed down slightly by images (which were already compressed), external embeded youtube video, and external JavaScript resources such as JQuery.
+
+
+#### Best Practises
+
+Scored between 95 - 100 on every page.
+
+#### SEO
+
+The SEO score tended to be around 90 addee
+
+#### Screenshot from dev tools
+
+I was getting notification warning about Chrome extensions affecting results, even in icognito mode.
+
+![Dev-tools](https://i.imgur.com/lSNGt6ah.png)
