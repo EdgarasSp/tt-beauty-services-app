@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 STATUS = ((0, "Pending"), (1, "Completed"))
 class ContactForm(models.Model):
     subject_type = models.CharField(max_length=100)
