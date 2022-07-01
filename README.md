@@ -74,3 +74,72 @@ Website color pallet:
 * Complement: 	[#feebf2](https://mycolor.space/?hex=%23feebf2&sub=1)
 * Text A: 		[#292929](https://mycolor.space/?hex=%23292929&sub=1)
 * Text B: 		[#2b2a2a](https://mycolor.space/?hex=%232b2a2a&sub=1)
+
+
+#
+## Database Model
+
+This project uses the PostgreSQL relational database. There is a total of 4 models.
+#
+### **Models**
+
+#### **Contact Form**
+
+---
+Name              |Field Type   |Validation                                             
+------------------|-------------|-------------------------------------------------------
+subject\_type     |CharField    |max\_length=100                                         
+service\_location |CharField    |max\_length=100                                  
+first\_name       |CharField    |max\_length=50                                  
+last\_name        |CharField    |max\_length=50                                         
+contact\_number   |CharField    |max\_length=20                
+email\_address    |TextField    |max\_length=50               
+message\_problems |TextField    |max\_length=1000                  
+received\_date    |DateField    |auto_now_add=True               
+status            |IntegerField |choices=STATUS, default=0                                                 
+
+#### **Booking Form**
+
+---
+
+Name              |Field Type   |Validation                                             
+------------------|-------------|-------------------------------------------------------
+first\_name       |CharField    |max\_length=50                                  
+last\_name        |CharField    |max\_length=50                                         
+contact\_number   |CharField    |max\_length=20                
+email\_address    |TextField    |max\_length=50
+service           |CharField    |max\_length=100                                         
+service\_location |CharField    |max\_length=100                 
+message\_problems |TextField    |max\_length=1000                  
+received\_date    |DateField    |auto_now_add=True               
+status            |IntegerField |choices=STATUS, default=0
+
+#### **Portfolio Post**
+
+---
+
+Name              |Field Type        |Validation                                             
+------------------|------------------|-------------------------------------------------------
+title             |CharField         |max\_length=200, unique=True                                 
+slug              |SlugField         |max\_length=200, unique=True                                        
+author            |ForeignKey        |User, on\_delete=models.CASCADE, related\_name="portfolio\_posts",
+featured\_image   |CloudinaryField   |'image' default='placeholder'
+excerpt           |TextField         |blank=True                                        
+updated\_on       |DateTimeField     |auto\_now=True                 
+content           |TextField         |                  
+created\_on       |DateTimeField     |auto\_now_add=True              
+status            |IntegerField      |choices=STATUS, default=0
+likes             |ManyToManyField   |User, related\_name='portfolio\_like', blank=True
+
+#### **Comments**
+
+---
+
+Name              |Field Type      |Validation                                             
+------------------|----------------|-------------------------------------------------------
+name              |CharField       |max\_length=50                                  
+email             |EmailField      |max\_length=50
+body              |TextField       |max\_length=100                                         
+created\_on       |DateTimeField   |auto_now_add=True
+approved          |BooleanField    |auto_now_add=True                       
+                                                    
