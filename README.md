@@ -553,3 +553,27 @@ Follow the below steps to deploy the project on Heroku:
     The Database URL can be found within your PostgreSQL credentials.
 
 12. Congratulations, the project should now be deployed and ready to use :)
+
+## Credits
+
+### Code
+
+The project is influenced by the Code Institute Django tutorial series. These were the most efficient and obvious ways to implement the necessary functionality in my project.
+
+
+### Content and Images
+
+* The  images used for the webpage were all taken from the offical [Pexels](https://www.pexels.com/) website. Images i used are stored in my [Pexels collection](https://www.pexels.com/collections/beauty-wkxbc8d/) with appropriately credits.
+
+* Video was also take from [Pexels](https://www.pexels.com/) and found inside [Pexels collection](https://www.pexels.com/collections/beauty-wkxbc8d/). For embenindg to the site I have hosted it on Youtube.
+
+* Also would like to credit my sister in law as she is a hair dresser and helped with some text content.
+
+### Acknowledgements
+
+
+* [W3 Schools](https://www.w3schools.com/)
+* [Stackoverflow](https://stackoverflow.com/)
+* [Bootsrap](https://getbootstrap.com//)
+* [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
