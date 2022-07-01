@@ -27,7 +27,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+# IM REALLY SORRY, AFTER 48H STRAIGHT DEBUG FALSE BROKE EVERYTHING
+# I RAN OUT TIME TO FIX AND HAD TO REVERT BACK TO THIS VERSION AND SET AS True
+# REALLY SORRY AGAIN 
+
+DEBUG = True 
 
 ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com', 'localhost']
 
