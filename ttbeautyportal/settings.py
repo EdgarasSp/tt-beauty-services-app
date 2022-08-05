@@ -14,6 +14,10 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+'''
+THIS
+'''
+development = os.environ.get('DEVELOPMENT', True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,17 +28,28 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+
+'''
+THIS - check if line 36 or 38, commit was 38
+'''
+
+SECRET_KEY = os.environ.get('SECRET_KEY')  # WAS ORG.
+
+# SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# IM REALLY SORRY, AFTER 48H STRAIGHT DEBUG FALSE BROKE EVERYTHING
-# I RAN OUT TIME TO FIX AND HAD TO REVERT BACK TO THIS VERSION AND SET AS True
-# REALLY SORRY AGAIN 
+'''
+THIS
+'''
+DEBUG = development
 
-DEBUG = True 
+if development:
+    ALLOWED_HOSTS = ['localhost']
+else:
+    ALLOWED_HOSTS = [os.environ.get('tt-beauty-services.herokuapp.com')]
 
-ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com', 'localhost'] WAS ORG. FOR ABOVE
 
 # CORS_ORIGIN_WHITELIST = ['https://localhost:8000', 'https://127.0.0.1:8000']
 
@@ -121,9 +136,24 @@ WSGI_APPLICATION = 'ttbeautyportal.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-}
+
+if development:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+
+# BELOW ORG. FOR THE ABOVE
+
+# DATABASES = {
+#    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# }
 
 
 # Password validation
