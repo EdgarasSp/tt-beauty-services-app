@@ -47,7 +47,7 @@ DEBUG = development
 if development:
     ALLOWED_HOSTS = ['localhost']
 else:
-    ALLOWED_HOSTS = [os.environ.get('tt-beauty-services.herokuapp.com')]
+    ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com']
 
 # ALLOWED_HOSTS = ['tt-beauty-services.herokuapp.com', 'localhost'] WAS ORG. FOR ABOVE
 
