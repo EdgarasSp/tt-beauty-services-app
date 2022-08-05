@@ -33,9 +33,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 THIS - check if line 36 or 38, commit was 38
 '''
 
-SECRET_KEY = os.environ.get('SECRET_KEY')  # WAS ORG.
+# SECRET_KEY = os.environ.get('SECRET_KEY')  # WAS ORG.
 
-# SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
