@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+<section class="h-100 gradient-form">
+  <div class="container-fluid py-5 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10 ">
+        <div class="card rounded-3 text-black align-items-center">
+          <div class="col-lg-6 ">
+            <div class="card-body p-md-5 mx-md-4 ">
+              <div class="text-center">
+                <h3 class="mt-1 mb-5 pb-1">{% trans "Welcome!" %}</h3>
+                <p>{% blocktrans %} An account is required to make a booking. <br><br>If you have already an
+                  account, then please Login and if not
+                  then please Register to start booking. {% endblocktrans %}</p><br>
+              </div>
+              <div class="signup form-outline row col-md-6 offset-md-3 d-flex justify-content-center align-items-center">
+                <a href="{% url 'account_login' %}" class="btn btn-signup mb-3">Login</a>
+                <a href="{% url 'account_signup' %}" class="btn btn-signup mb-3">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

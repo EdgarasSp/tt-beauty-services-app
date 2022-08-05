@@ -3,11 +3,30 @@
 {% block content %}
 
 <!--Contact Us Include Form Start-->
-<div class="container-fluid cover-picture">
-    <div>
-        {% include "booking/booking_form.html" %}
+<div class="container-fluid ">
+    <div class="row">
+        {% if user.is_authenticated %}
+        <div class="container-fluid cover-picture">
+            <div>
+                {% include "booking/booking_form.html" %}
+            </div>
+        </div>
+        {% else %}
+        <div class="container-fluid">
+            <div>
+                {% include "account/signup_bookings.html" %}
+            </div>
+        </div>
+        {% endif %}
+        <span class="text-secondary"> {{ post.number_of_likes }}</span>
     </div>
 </div>
+
+
+
+
+
+
 <!--Contact Us Include Form End-->
 
 {%endblock%}
