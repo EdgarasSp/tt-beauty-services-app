@@ -7,6 +7,7 @@ STATUS = ((0, "Pending"), (1, "Contacted"), (2, "Accepted"), (3, "Canceled"))
 
 
 class Booking(models.Model):
+    # booking_user = ForeingKey
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     contact_number = models.CharField(max_length=50)
